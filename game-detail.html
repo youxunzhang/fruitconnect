@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏详情 - GameHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="detail-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-gamepad"></i>
+                <span>GameHub</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="#" class="nav-link">热门游戏</a>
+                <a href="#" class="nav-link">最新游戏</a>
+                <a href="#" class="nav-link">分类</a>
+                <a href="#" class="nav-link">排行榜</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索游戏...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="game-detail-container">
+            <!-- 游戏标题区域 -->
+            <div class="game-header">
+                <div class="game-title-section">
+                    <h1 id="gameTitle">游戏标题</h1>
+                    <div class="game-meta">
+                        <span class="game-category" id="gameCategory">分类</span>
+                        <div class="game-rating">
+                            <span class="stars" id="gameStars">★★★★★</span>
+                            <span class="rating-text" id="gameRating">4.5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="action-btn favorite-btn">
+                        <i class="far fa-heart"></i>
+                        <span>收藏</span>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <i class="fas fa-share"></i>
+                        <span>分享</span>
+                    </button>
+                    <a href="index.html" class="action-btn back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>返回</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 游戏内容区域 -->
+            <div class="game-content">
+                <!-- 游戏iframe -->
+                <div class="game-frame-container">
+                    <div class="game-frame-header">
+                        <h3>开始游戏</h3>
+                        <div class="frame-controls">
+                            <button class="control-btn" id="fullscreenBtn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                            <button class="control-btn" id="refreshBtn">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-frame">
+                        <iframe id="gameIframe" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- 游戏信息侧边栏 -->
+                <div class="game-sidebar">
+                    <div class="game-info-card">
+                        <h3>游戏信息</h3>
+                        <div class="info-item">
+                            <span class="info-label">游戏名称:</span>
+                            <span class="info-value" id="infoTitle">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">游戏分类:</span>
+                            <span class="info-value" id="infoCategory">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">游戏评分:</span>
+                            <span class="info-value" id="infoRating">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">游戏ID:</span>
+                            <span class="info-value" id="infoId">-</span>
+                        </div>
+                    </div>
+
+                    <div class="game-description-card">
+                        <h3>游戏描述</h3>
+                        <p id="gameDescription">游戏描述将在这里显示...</p>
+                    </div>
+
+                    <div class="game-controls-card">
+                        <h3>游戏控制</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <i class="fas fa-mouse"></i>
+                                <span>鼠标控制</span>
+                            </div>
+                            <div class="control-item">
+                                <i class="fas fa-keyboard"></i>
+                                <span>键盘控制</span>
+                            </div>
+                            <div class="control-item">
+                                <i class="fas fa-touch"></i>
+                                <span>触摸控制</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-tags-card">
+                        <h3>游戏标签</h3>
+                        <div class="tags-list" id="gameTags">
+                            <span class="tag">益智</span>
+                            <span class="tag">策略</span>
+                            <span class="tag">休闲</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 相关游戏推荐 -->
+            <div class="related-games">
+                <h2>相关游戏推荐</h2>
+                <div class="related-games-grid" id="relatedGames">
+                    <!-- 相关游戏将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于GameHub</h3>
+                <p>我们致力于为玩家提供最好的游戏体验，汇集全球顶级游戏内容。</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="#">热门游戏</a></li>
+                    <li><a href="#">最新游戏</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@gamehub.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 游戏世界，虚拟空间</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GameHub. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="detail-script.js"></script>
+</body>
+</html> 

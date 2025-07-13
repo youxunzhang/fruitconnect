@@ -1,33 +1,113 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fruit Connect - Home</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - 欧美流行游戏平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- 添加html2canvas库用于游戏截图 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- AI图像生成配置文件 -->
+    <script src="config.js"></script>
 </head>
 <body>
-  <header class="main-header">
-    <h1 class="logo">Fruit Connect</h1>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="detail.html">Game Details</a>
-      <a href="play.html" class="play-btn">Try Now</a>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-gamepad"></i>
+                <span>GameHub</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-link active">首页</a>
+                <a href="#" class="nav-link">热门游戏</a>
+                <a href="#" class="nav-link">最新游戏</a>
+                <a href="#" class="nav-link">分类</a>
+                <a href="#" class="nav-link">排行榜</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索游戏...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
     </nav>
-  </header>
-  <section class="banner">
-    <div class="banner-content">
-      <h2>Cool Fruit Connect</h2>
-      <div class="game-iframe-wrapper">
-        <iframe src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}"
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>发现最酷的游戏世界</h1>
+                <p>体验来自全球的顶级游戏，享受无与伦比的游戏乐趣</p>
+                <p style="font-size: 1rem; color: #00ff88; margin-bottom: 1rem;">🎮 特色游戏：面包店管理模拟器</p>
+                <button class="cta-button">立即开始</button>
+            </div>
+            <div class="hero-game">
+                <iframe src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}"
           width="100%" height="480" scrolling="no" frameborder="0" allowfullscreen style="border-radius: 18px; box-shadow: 0 4px 24px #43c6ac33; background: #fff;"></iframe>
-      </div>
-      <a href="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?utm_source=example.com&utm_medium=fruit-connect-3&utm_campaign=block-and-redirect" class="cta-btn" style="margin-top: 1.5rem;" target="_blank" rel="noopener">Play</a>
-    </div>
-  </section>
-  <footer class="main-footer">
-    <p>© 2024 Fruit Connect. All rights reserved.</p>
-  </footer>
-  <script src="js/main.js"></script>
+            </div>
+        </section>
+
+        <!-- 游戏网格 -->
+        <section class="games-section">
+            <div class="section-header">
+                <h2>热门游戏</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">全部</button>
+                    <button class="filter-btn">动作</button>
+                    <button class="filter-btn">策略</button>
+                    <button class="filter-btn">益智</button>
+                    <button class="filter-btn">冒险</button>
+                    <button class="filter-btn">模拟经营</button>
+                </div>
+            </div>
+            
+            <div class="games-grid" id="gamesGrid">
+                <!-- 游戏卡片将通过JavaScript动态生成 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于GameHub</h3>
+                <p>我们致力于为玩家提供最好的游戏体验，汇集全球顶级游戏内容。</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">热门游戏</a></li>
+                    <li><a href="#">最新游戏</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@gamehub.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 游戏世界，虚拟空间</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GameHub. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html> 
