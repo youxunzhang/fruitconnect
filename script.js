@@ -211,6 +211,16 @@ const gamesData = [
     },
     {
         id: 33,
+        title: "Monster Survivors",
+        category: "生存",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center&random=monster",
+        iframe: "https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html",
+        description: "怪物生存游戏，在危险世界中生存并击败怪物",
+        screenshotUrl: null
+    },
+    {
+        id: 34,
         title: "隧道竞速",
         category: "竞速",
         rating: 4.5,
@@ -219,7 +229,7 @@ const gamesData = [
         description: "生存冒险游戏"
     },
     {
-        id: 34,
+        id: 35,
         title: "雪地滑行",
         category: "竞速",
         rating: 4.6,
@@ -228,7 +238,7 @@ const gamesData = [
         description: "建造类游戏"
     },
     {
-        id: 35,
+        id: 36,
         title: "塔楼破坏",
         category: "动作",
         rating: 4.4,
@@ -237,7 +247,7 @@ const gamesData = [
         description: "探索冒险游戏"
     },
     {
-        id: 36,
+        id: 37,
         title: "花朵合并",
         category: "益智",
         rating: 4.3,
@@ -246,7 +256,7 @@ const gamesData = [
         description: "竞速类游戏"
     },
     {
-        id: 37,
+        id: 38,
         title: "自行车冒险",
         category: "冒险",
         rating: 4.7,
@@ -255,7 +265,7 @@ const gamesData = [
         description: "策略类游戏"
     },
     {
-        id: 38,
+        id: 39,
         title: "猫咪世界",
         category: "模拟",
         rating: 4.5,
@@ -264,7 +274,7 @@ const gamesData = [
         description: "益智类游戏"
     },
     {
-        id: 39,
+        id: 40,
         title: "翻转挑战",
         category: "动作",
         rating: 4.4,
@@ -273,7 +283,7 @@ const gamesData = [
         description: "动作类游戏"
     },
     {
-        id: 40,
+        id: 41,
         title: "奶酪冒险",
         category: "动作",
         rating: 4.6,
@@ -282,7 +292,7 @@ const gamesData = [
         description: "冒险类游戏"
     },
     {
-        id: 41,
+        id: 42,
         title: "体育竞技",
         category: "动作",
         rating: 4.3,
@@ -291,7 +301,7 @@ const gamesData = [
         description: "体育类游戏"
     },
     {
-        id: 42,
+        id: 43,
         title: "音乐节奏",
         category: "动作",
         rating: 4.4,
@@ -300,7 +310,7 @@ const gamesData = [
         description: "音乐类游戏"
     },
     {
-        id: 43,
+        id: 44,
         title: "教育益智",
         category: "益智",
         rating: 4.5,
@@ -309,7 +319,7 @@ const gamesData = [
         description: "教育类游戏"
     },
     {
-        id: 44,
+        id: 45,
         title: "休闲时光",
         category: "益智",
         rating: 4.2,
@@ -318,7 +328,7 @@ const gamesData = [
         description: "休闲类游戏"
     },
     {
-        id: 45,
+        id: 46,
         title: "角色扮演",
         category: "冒险",
         rating: 4.7,
@@ -327,7 +337,7 @@ const gamesData = [
         description: "角色扮演游戏"
     },
     {
-        id: 46,
+        id: 47,
         title: "模拟经营",
         category: "策略",
         rating: 4.4,
@@ -336,7 +346,7 @@ const gamesData = [
         description: "模拟类游戏"
     },
     {
-        id: 47,
+        id: 48,
         title: "卡牌对战",
         category: "策略",
         rating: 4.6,
@@ -345,7 +355,7 @@ const gamesData = [
         description: "卡牌类游戏"
     },
     {
-        id: 48,
+        id: 49,
         title: "桌游策略",
         category: "策略",
         rating: 4.5,
@@ -354,7 +364,7 @@ const gamesData = [
         description: "桌游类游戏"
     },
     {
-        id: 49,
+        id: 50,
         title: "街机经典",
         category: "动作",
         rating: 4.3,
@@ -363,7 +373,7 @@ const gamesData = [
         description: "街机类游戏"
     },
     {
-        id: 50,
+        id: 51,
         title: "经典合集",
         category: "益智",
         rating: 4.8,
@@ -423,10 +433,8 @@ function createGameCard(game) {
         </div>
     `;
     
-    card.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('capture-btn')) {
-            openGameDetail(game);
-        }
+    card.addEventListener('click', () => {
+        openGameDetail(game);
     });
     
     return card;
@@ -529,225 +537,7 @@ window.addEventListener('scroll', function() {
     });
 }); 
 
-// 游戏截图功能 - 简化版本
-class GameScreenshot {
-    constructor() {
-        this.screenshotQueue = [];
-        this.isProcessing = false;
-        this.screenshotContainer = null;
-    }
-
-    // 初始化截图容器
-    initScreenshotContainer() {
-        if (this.screenshotContainer) return;
-        
-        this.screenshotContainer = document.createElement('div');
-        this.screenshotContainer.id = 'screenshot-container';
-        this.screenshotContainer.style.cssText = `
-            position: fixed;
-            top: -9999px;
-            left: -9999px;
-            width: 800px;
-            height: 600px;
-            z-index: -1;
-            overflow: hidden;
-        `;
-        document.body.appendChild(this.screenshotContainer);
-    }
-
-    // 截取单个游戏截图
-    async captureGameScreenshot(game) {
-        return new Promise((resolve, reject) => {
-            this.initScreenshotContainer();
-            
-            // 创建临时iframe
-            const iframe = document.createElement('iframe');
-            iframe.src = game.iframe;
-            iframe.style.cssText = `
-                width: 100%;
-                height: 100%;
-                border: none;
-                display: block;
-            `;
-            
-            this.screenshotContainer.appendChild(iframe);
-
-            // 等待iframe加载
-            iframe.onload = () => {
-                setTimeout(async () => {
-                    try {
-                        // 尝试使用html2canvas截图
-                        if (typeof html2canvas !== 'undefined') {
-                            const canvas = await html2canvas(iframe.contentDocument.body, {
-                                width: 800,
-                                height: 600,
-                                scale: 0.375, // 300/800
-                                useCORS: true,
-                                allowTaint: true,
-                                backgroundColor: '#000000'
-                            });
-                            
-                            const screenshotUrl = canvas.toDataURL('image/jpeg', 0.8);
-                            this.screenshotContainer.removeChild(iframe);
-                            resolve(screenshotUrl);
-                        } else {
-                            // 备用方案：使用预定义图片
-                            const fallbackUrl = this.getFallbackScreenshot(game);
-                            this.screenshotContainer.removeChild(iframe);
-                            resolve(fallbackUrl);
-                        }
-                    } catch (error) {
-                        console.error(`截图失败: ${game.title}`, error);
-                        const fallbackUrl = this.getFallbackScreenshot(game);
-                        this.screenshotContainer.removeChild(iframe);
-                        resolve(fallbackUrl);
-                    }
-                }, 2000); // 等待2秒让游戏加载
-            };
-
-            iframe.onerror = () => {
-                const fallbackUrl = this.getFallbackScreenshot(game);
-                this.screenshotContainer.removeChild(iframe);
-                resolve(fallbackUrl);
-            };
-        });
-    }
-
-    // 获取备用截图URL
-    getFallbackScreenshot(game) {
-        const fallbackMap = {
-            'Wacky Flip': 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center',
-            'Cheese Chompers 3D': 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop&crop=center',
-            'Snow Rush 3D': 'https://images.unsplash.com/photo-1548777123-e216912df7d8?w=300&h=200&fit=crop&crop=center',
-            'Tower Crash 3D': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center',
-            'Tunnel Road': 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=300&h=200&fit=crop&crop=center',
-            'Merge Flowers': 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center',
-            'Obby On a Bike': 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=300&h=200&fit=crop&crop=center',
-            'Cat Chaos Simulator': 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=200&fit=crop&crop=center',
-            'Crazy Cattle 3D': 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?w=300&h=200&fit=crop&crop=center'
-        };
-        
-        return fallbackMap[game.title] || game.image;
-    }
-
-    // 更新游戏卡片图片
-    updateGameCardImage(game, screenshotUrl) {
-        const gameCards = document.querySelectorAll(`[data-game-id="${game.id}"]`);
-        gameCards.forEach(card => {
-            const img = card.querySelector('img');
-            if (img && screenshotUrl) {
-                img.src = screenshotUrl;
-                img.style.transition = 'opacity 0.3s ease';
-                // 添加截图标识
-                card.classList.add('has-screenshot');
-            }
-        });
-    }
-
-    // 手动截取单个游戏
-    async captureSingleGame(gameId) {
-        const game = gamesData.find(g => g.id === gameId);
-        if (!game) return;
-
-        const button = document.querySelector(`[data-game-id="${gameId}"] .capture-btn`);
-        if (button) {
-            button.textContent = '📸 截图中...';
-            button.disabled = true;
-        }
-
-        try {
-            const screenshotUrl = await this.captureGameScreenshot(game);
-            game.screenshotUrl = screenshotUrl;
-            this.updateGameCardImage(game, screenshotUrl);
-            
-            // 保存到localStorage
-            this.saveScreenshotToStorage(game.id, screenshotUrl);
-            
-            if (button) {
-                button.textContent = '✅ 已截图';
-                setTimeout(() => {
-                    button.textContent = '📸 重新截图';
-                    button.disabled = false;
-                }, 2000);
-            }
-        } catch (error) {
-            console.error('截图失败:', error);
-            if (button) {
-                button.textContent = '❌ 截图失败';
-                setTimeout(() => {
-                    button.textContent = '📸 重新截图';
-                    button.disabled = false;
-                }, 2000);
-            }
-        }
-    }
-
-    // 保存截图到localStorage
-    saveScreenshotToStorage(gameId, screenshotUrl) {
-        try {
-            const screenshots = JSON.parse(localStorage.getItem('gameScreenshots') || '{}');
-            screenshots[gameId] = screenshotUrl;
-            localStorage.setItem('gameScreenshots', JSON.stringify(screenshots));
-        } catch (error) {
-            console.error('保存截图失败:', error);
-        }
-    }
-
-    // 从localStorage加载截图
-    loadScreenshotsFromStorage() {
-        try {
-            const screenshots = JSON.parse(localStorage.getItem('gameScreenshots') || '{}');
-            Object.keys(screenshots).forEach(gameId => {
-                const game = gamesData.find(g => g.id === parseInt(gameId));
-                if (game) {
-                    game.screenshotUrl = screenshots[gameId];
-                    this.updateGameCardImage(game, screenshots[gameId]);
-                }
-            });
-        } catch (error) {
-            console.error('加载截图失败:', error);
-        }
-    }
-
-    // 批量截取所有游戏
-    async captureAllGames() {
-        const button = document.querySelector('.screenshot-all-btn');
-        if (button) {
-            button.textContent = '📸 批量截图中...';
-            button.disabled = true;
-        }
-
-        for (let i = 0; i < gamesData.length; i++) {
-            const game = gamesData[i];
-            try {
-                const screenshotUrl = await this.captureGameScreenshot(game);
-                game.screenshotUrl = screenshotUrl;
-                this.updateGameCardImage(game, screenshotUrl);
-                this.saveScreenshotToStorage(game.id, screenshotUrl);
-                
-                // 更新进度
-                if (button) {
-                    button.textContent = `📸 截图中... (${i + 1}/${gamesData.length})`;
-                }
-                
-                // 延迟避免过快请求
-                await new Promise(resolve => setTimeout(resolve, 1000));
-            } catch (error) {
-                console.error(`截图失败: ${game.title}`, error);
-            }
-        }
-
-        if (button) {
-            button.textContent = '✅ 批量截图完成';
-            setTimeout(() => {
-                button.textContent = '🖼️ 批量更新封面';
-                button.disabled = false;
-            }, 2000);
-        }
-    }
-}
-
-// 移除截图功能
+// 删除 GameScreenshot 类及相关方法和所有 gameScreenshot 的调用
 
 // AI图像生成功能
 class AIImageGenerator {
@@ -1143,10 +933,8 @@ function createGameCard(game) {
         </div>
     `;
     
-    card.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('capture-btn')) {
-            openGameDetail(game);
-        }
+    card.addEventListener('click', () => {
+        openGameDetail(game);
     });
     
     return card;
@@ -1242,12 +1030,12 @@ function addScreenshotButtons() {
     allButton.className = 'screenshot-all-btn';
     allButton.textContent = '🖼️ 批量更新封面';
     allButton.addEventListener('click', () => {
-        gameScreenshot.captureAllGames();
+        // gameScreenshot.captureAllGames(); // 移除此行
     });
     document.body.appendChild(allButton);
 
     // 加载已保存的截图
-    gameScreenshot.loadScreenshotsFromStorage();
+    // gameScreenshot.loadScreenshotsFromStorage(); // 移除此行
 }
 
 // 页面加载完成后初始化
@@ -1269,9 +1057,6 @@ function addAIGenerationButtons() {
     controlsDiv.className = 'generation-controls';
     
     controlsDiv.innerHTML = `
-        <button class="ai-generate-btn" onclick="generateAllGameImages()" id="generate-all-btn">
-            🤖 批量生成游戏图片
-        </button>
         <button class="ai-generate-btn" onclick="generateSingleGameImage()" id="generate-single-btn">
             🎨 生成单个游戏图片
         </button>
@@ -1517,7 +1302,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 导出函数供全局使用
-window.generateAllGameImages = generateAllGameImages;
 window.generateSingleGameImage = generateSingleGameImage;
 window.clearGeneratedImages = clearGeneratedImages;
 window.showGenerationStatus = showGenerationStatus; 
