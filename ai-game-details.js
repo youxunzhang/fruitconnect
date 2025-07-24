@@ -80,7 +80,7 @@ class AIGameDetailsGenerator {
         const categoryTags = {
             '动作': ['刺激', '反应', '操作', '冒险'],
             '竞速': ['速度', '驾驶', '竞速', '挑战'],
-            '益智': ['思考', '逻辑', '解谜', '策略'],
+            '益智': ['思考', '逻辑', '解谜', '策略', '词汇', '记忆', '数学'],
             '冒险': ['探索', '剧情', '冒险', '发现'],
             '模拟': ['真实', '模拟', '管理', '体验'],
             '策略': ['计划', '战术', '策略', '思考'],
@@ -182,23 +182,54 @@ class AIGameDetailsGenerator {
         
         // 根据提示词生成模拟响应
         if (prompt.includes('描述')) {
-            return `《${prompt.match(/游戏"([^"]+)"/)?.[1] || '游戏'}》是一款精彩刺激的游戏，融合了现代游戏设计理念和经典玩法元素。游戏画面精美，操作流畅，为玩家带来极致的游戏体验。无论是新手还是老玩家都能在这里找到属于自己的乐趣。`;
+            const gameName = prompt.match(/游戏"([^"]+)"/)?.[1] || '游戏';
+            const isPuzzle = prompt.includes('益智') || prompt.includes('词汇') || prompt.includes('记忆') || prompt.includes('数学');
+            
+            if (isPuzzle) {
+                return `《${gameName}》是一款精心设计的益智游戏，融合了现代教育理念和经典游戏元素。游戏不仅具有娱乐性，更能锻炼玩家的逻辑思维、记忆力和词汇量。通过精心设计的关卡和渐进式难度，让玩家在享受游戏乐趣的同时提升认知能力。`;
+            } else {
+                return `《${gameName}》是一款精彩刺激的游戏，融合了现代游戏设计理念和经典玩法元素。游戏画面精美，操作流畅，为玩家带来极致的游戏体验。无论是新手还是老玩家都能在这里找到属于自己的乐趣。`;
+            }
         }
         
         if (prompt.includes('特色')) {
-            return `🎮 精美的游戏画面\n⚡ 流畅的操作体验\n🏆 丰富的成就系统\n🎯 多样的游戏模式\n🌟 独特的游戏机制`;
+            const isPuzzle = prompt.includes('益智') || prompt.includes('词汇') || prompt.includes('记忆') || prompt.includes('数学');
+            
+            if (isPuzzle) {
+                return `🧠 锻炼逻辑思维能力\n📚 提升词汇量和知识储备\n⏰ 训练记忆力和注意力\n🎯 渐进式难度设计\n🌟 丰富多样的游戏模式`;
+            } else {
+                return `🎮 精美的游戏画面\n⚡ 流畅的操作体验\n🏆 丰富的成就系统\n🎯 多样的游戏模式\n🌟 独特的游戏机制`;
+            }
         }
         
         if (prompt.includes('操作')) {
-            return `1. 使用方向键或WASD控制角色移动\n2. 点击鼠标或空格键进行主要操作\n3. 收集游戏中的道具和奖励\n4. 完成关卡目标获得胜利`;
+            const isPuzzle = prompt.includes('益智') || prompt.includes('词汇') || prompt.includes('记忆') || prompt.includes('数学');
+            
+            if (isPuzzle) {
+                return `1. 使用鼠标点击或键盘输入进行游戏操作\n2. 仔细阅读游戏规则和提示信息\n3. 运用逻辑思维解决各种谜题\n4. 完成关卡挑战获得成就和奖励`;
+            } else {
+                return `1. 使用方向键或WASD控制角色移动\n2. 点击鼠标或空格键进行主要操作\n3. 收集游戏中的道具和奖励\n4. 完成关卡目标获得胜利`;
+            }
         }
         
         if (prompt.includes('推荐')) {
-            return `1. 游戏内容丰富，可玩性极高\n2. 操作简单易上手，适合所有年龄段\n3. 画面精美，音效出色，沉浸感强`;
+            const isPuzzle = prompt.includes('益智') || prompt.includes('词汇') || prompt.includes('记忆') || prompt.includes('数学');
+            
+            if (isPuzzle) {
+                return `1. 具有教育价值，能锻炼大脑思维能力\n2. 操作简单，适合所有年龄段的玩家\n3. 内容丰富，提供持续的学习和挑战`;
+            } else {
+                return `1. 游戏内容丰富，可玩性极高\n2. 操作简单易上手，适合所有年龄段\n3. 画面精美，音效出色，沉浸感强`;
+            }
         }
         
         if (prompt.includes('技巧')) {
-            return `1. 仔细观察游戏环境，寻找隐藏要素\n2. 合理利用道具和技能，提升游戏效率\n3. 多练习操作技巧，提高反应速度`;
+            const isPuzzle = prompt.includes('益智') || prompt.includes('词汇') || prompt.includes('记忆') || prompt.includes('数学');
+            
+            if (isPuzzle) {
+                return `1. 保持专注力，仔细分析问题\n2. 运用逻辑思维，寻找解题规律\n3. 多练习，提升解题速度和准确性`;
+            } else {
+                return `1. 仔细观察游戏环境，寻找隐藏要素\n2. 合理利用道具和技能，提升游戏效率\n3. 多练习操作技巧，提高反应速度`;
+            }
         }
         
         return 'AI生成的内容将在这里显示';

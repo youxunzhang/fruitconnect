@@ -29,7 +29,7 @@ async function loadGameDetails() {
         }
 
         // 查找游戏数据
-        currentGame = gamesData.find(game => game.id === gameId);
+        currentGame = gamesData.find(game => game.id === parseInt(gameId));
         
         if (!currentGame) {
             showError('未找到游戏数据');
@@ -78,7 +78,7 @@ function updateGameIframe() {
     
     const iframe = document.getElementById('gameIframe');
     if (iframe) {
-        iframe.src = currentGame.iframeUrl;
+        iframe.src = currentGame.iframe;
     }
 }
 

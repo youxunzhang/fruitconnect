@@ -380,6 +380,146 @@ const gamesData = [
         image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center&random=17",
         iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
         description: "经典游戏合集"
+    },
+    {
+        id: 52,
+        title: "Memoji",
+        category: "益智",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=memoji",
+        iframe: "https://html5.gamedistribution.com/50c56858d355416ba84e18c68321a69b/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "表情符号记忆游戏，挑战你的记忆力",
+        screenshotUrl: null
+    },
+    {
+        id: 53,
+        title: "Cityquest",
+        category: "冒险",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=300&h=200&fit=crop&crop=center&random=cityquest",
+        iframe: "https://html5.gamedistribution.com/31068f4a88af4d3da31feeeddaeb44c8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "城市探索冒险游戏，发现城市的秘密",
+        screenshotUrl: null
+    },
+    {
+        id: 54,
+        title: "10K",
+        category: "益智",
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=10k",
+        iframe: "https://html5.gamedistribution.com/3acc054600054896b62bda751eaef869/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "数字益智游戏，挑战你的数学思维",
+        screenshotUrl: null
+    },
+    {
+        id: 55,
+        title: "Phrasle Master",
+        category: "益智",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center&random=phrasle",
+        iframe: "https://html5.gamedistribution.com/1adf969783854409b65b5ccb0873ea8a/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "短语猜谜游戏，测试你的词汇量",
+        screenshotUrl: null
+    },
+    {
+        id: 56,
+        title: "Word Search",
+        category: "益智",
+        rating: 4.4,
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=wordsearch",
+        iframe: "https://html5.gamedistribution.com/c13ee9c06edc4f0a8d7f6f291a7c13d8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "单词搜索游戏，在字母网格中寻找隐藏单词",
+        screenshotUrl: null
+    },
+    {
+        id: 57,
+        title: "Kitty Scramble",
+        category: "益智",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=200&fit=crop&crop=center&random=kitty",
+        iframe: "https://html5.gamedistribution.com/944186abe50e452dac7f0e8d3e0a8814/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "可爱猫咪主题的单词拼图游戏",
+        screenshotUrl: null
+    },
+    {
+        id: 58,
+        title: "Daily Crossword",
+        category: "益智",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=crossword",
+        iframe: "https://html5.gamedistribution.com/e74d9a4123fb4880bc5e3d7664c9dcc9/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "每日填字游戏，挑战你的词汇和知识",
+        screenshotUrl: null
+    },
+    {
+        id: 59,
+        title: "Hexa",
+        category: "益智",
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=hexa",
+        iframe: "https://html5.gamedistribution.com/ab1984b4b1314e1dab545a34b62bce47/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "六边形益智游戏，考验你的空间思维",
+        screenshotUrl: null
+    },
+    {
+        id: 60,
+        title: "Daily Sudoku",
+        category: "益智",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=sudoku",
+        iframe: "https://html5.gamedistribution.com/dd9701cd84da40699cdc404645f29c1f/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "每日数独游戏，锻炼逻辑思维能力",
+        screenshotUrl: null
+    },
+    {
+        id: 61,
+        title: "Crocword Crossword Puzzle Game",
+        category: "益智",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center&random=crocword",
+        iframe: "https://html5.gamedistribution.com/3e314ff40f40472f9aefed5b046f6dcc/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "鳄鱼主题填字游戏，趣味横生的词汇挑战",
+        screenshotUrl: null
+    },
+    {
+        id: 62,
+        title: "Daily Jigsaw",
+        category: "益智",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center&random=jigsaw",
+        iframe: "https://html5.gamedistribution.com/5eebb19f0fcd43849721b95ecf53a700/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "每日拼图游戏，享受拼图的乐趣",
+        screenshotUrl: null
+    },
+    {
+        id: 63,
+        title: "Word Swipe",
+        category: "益智",
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=wordswipe",
+        iframe: "https://html5.gamedistribution.com/ef4b392680554564abe1a3d3917a754b/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "滑动单词游戏，通过滑动连接字母组成单词",
+        screenshotUrl: null
+    },
+    {
+        id: 64,
+        title: "Word Sauce",
+        category: "益智",
+        rating: 4.4,
+        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center&random=wordsauce",
+        iframe: "https://html5.gamedistribution.com/8d8965a1f1af4d2b884e0bc48737925d/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "单词汤游戏，在字母汤中寻找隐藏单词",
+        screenshotUrl: null
+    },
+    {
+        id: 65,
+        title: "4 Pix Word Quiz",
+        category: "益智",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=4pix",
+        iframe: "https://html5.gamedistribution.com/992bf414c2fd4a7d8160bcbafd99b6f3/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
+        description: "四图猜词游戏，根据四张图片猜出共同单词",
+        screenshotUrl: null
     }
 ];
 
@@ -416,12 +556,7 @@ function createGameCard(game) {
     
     card.innerHTML = `
         <div class="game-image">
-            <img src="${game.screenshotUrl || game.image}" alt="${game.title}" onerror="this.style.display='none'">
-            <div class="game-overlay">
-                <button class="capture-btn" onclick="gameScreenshot.captureSingleGame(${game.id})" title="截取游戏封面">
-                    📸 截图
-                </button>
-            </div>
+            <img src="${game.image}" alt="${game.title}" onerror="this.style.display='none'">
         </div>
         <div class="game-info">
             <h3>${game.title}</h3>
