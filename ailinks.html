@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437"
+        crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-8794607118520437">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Links - Online SEO Tools Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- 添加html2canvas库用于游戏截图 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- AI图像生成配置文件 -->
+    <script src="config.js"></script>
+    <!-- 添加粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 添加AOS动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- 动态背景粒子 -->
+    <div id="particles-js"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-gamepad"></i>
+                <span>GameHub</span>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="#" class="nav-link">热门游戏</a>
+                <a href="#" class="nav-link">最新游戏</a>
+                <a href="#" class="nav-link">分类</a>
+                <a href="#" class="nav-link">排行榜</a>
+                <a href="ailinks.html" class="nav-link active">AI工具</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索游戏...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-user">
+                <button class="user-btn"><i class="fas fa-user"></i></button>
+                <button class="notification-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section class="hero-section">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-badge">
+                    <span>🤖 AI工具推荐</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">发现最酷的</span>
+                    <span class="title-line highlight">AI工具世界</span>
+                </h1>
+                <p class="hero-subtitle">体验来自全球的顶级AI工具，享受无与伦比的智能服务</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-robot"></i>
+                        <span>AI聊天</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-search"></i>
+                        <span>SEO工具</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>数据分析</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <button class="cta-button primary">
+                        <i class="fas fa-play"></i>
+                        立即体验
+                    </button>
+                    <button class="cta-button secondary">
+                        <i class="fas fa-info-circle"></i>
+                        了解更多
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">AI工具</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">SEO工具</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">在线服务</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-game" data-aos="fade-left" data-aos-duration="1000">
+                <div class="game-container">
+                    <div class="game-header">
+                        <h3>🎮 特色游戏：面包店管理模拟器</h3>
+                        <div class="game-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                    <iframe src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}"
+                        width="100%" height="480" scrolling="no" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏分类快速入口 -->
+        <section class="quick-categories" data-aos="fade-up" data-aos-duration="800">
+            <div class="container">
+                <h2 class="section-title">游戏分类</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="category-icon">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <h3>动作冒险</h3>
+                        <p>刺激的战斗体验</p>
+                        <span class="game-count">150+ 游戏</span>
+                    </div>
+                    <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="category-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <h3>策略益智</h3>
+                        <p>考验你的智慧</p>
+                        <span class="game-count">120+ 游戏</span>
+                    </div>
+                    <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="category-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>竞速体育</h3>
+                        <p>速度与激情</p>
+                        <span class="game-count">80+ 游戏</span>
+                    </div>
+                    <div class="category-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>模拟经营</h3>
+                        <p>建造你的世界</p>
+                        <span class="game-count">90+ 游戏</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏网格 -->
+        <section class="games-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">热门游戏</h2>
+                    <p class="section-subtitle">精选最受欢迎的游戏，让你爱不释手</p>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th"></i>
+                            全部
+                        </button>
+                        <button class="filter-btn" data-filter="action">
+                            <i class="fas fa-fist-raised"></i>
+                            动作
+                        </button>
+                        <button class="filter-btn" data-filter="strategy">
+                            <i class="fas fa-chess"></i>
+                            策略
+                        </button>
+                        <button class="filter-btn" data-filter="puzzle">
+                            <i class="fas fa-puzzle-piece"></i>
+                            益智
+                        </button>
+                        <button class="filter-btn" data-filter="adventure">
+                            <i class="fas fa-map"></i>
+                            冒险
+                        </button>
+                        <button class="filter-btn" data-filter="simulation">
+                            <i class="fas fa-home"></i>
+                            模拟
+                        </button>
+                        <button class="filter-btn" data-filter="racing">
+                            <i class="fas fa-car"></i>
+                            竞速
+                        </button>
+                        <button class="filter-btn" data-filter="survival">
+                            <i class="fas fa-shield-alt"></i>
+                            生存
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="games-grid" id="gamesGrid">
+                    <!-- 游戏卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色功能区域 -->
+        <section class="features-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">为什么选择GameHub？</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>闪电加载</h3>
+                        <p>优化的游戏引擎，确保流畅的游戏体验，无需等待</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>多平台支持</h3>
+                        <p>支持PC、平板、手机等多种设备，随时随地畅玩</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>社交互动</h3>
+                        <p>与全球玩家一起游戏，分享成就，建立友谊</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>每日奖励</h3>
+                        <p>每日登录获得奖励，解锁特殊道具和游戏内容</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI聊天模型区域 -->
+        <section class="ai-chat-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">🤖 AI聊天模型</h2>
+                <p class="section-subtitle">体验最新的人工智能聊天技术，与AI助手进行智能对话</p>
+                <div class="chat-models-grid">
+                    <div class="chat-model-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="model-header">
+                            <div class="model-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="model-badge">
+                                <span>🔥 热门</span>
+                            </div>
+                        </div>
+                        <div class="model-content">
+                            <h3>Venice AI Chat</h3>
+                            <p>先进的AI聊天模型，支持多语言对话，提供智能问答和创意写作服务</p>
+                            <div class="model-features">
+                                <span class="feature-tag">多语言</span>
+                                <span class="feature-tag">创意写作</span>
+                                <span class="feature-tag">智能问答</span>
+                            </div>
+                            <div class="model-stats">
+                                <div class="stat">
+                                    <span class="stat-value">99.9%</span>
+                                    <span class="stat-label">可用性</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">50+</span>
+                                    <span class="stat-label">语言</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">24/7</span>
+                                    <span class="stat-label">在线</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-actions">
+                            <a href="https://venice.ai/chat" target="_blank" class="chat-btn primary">
+                                <i class="fas fa-comments"></i>
+                                开始聊天
+                            </a>
+                            <button class="chat-btn secondary" onclick="showModelDetails('venice')">
+                                <i class="fas fa-info-circle"></i>
+                                了解更多
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chat-model-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="model-header">
+                            <div class="model-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="model-badge">
+                                <span>⚡ 快速</span>
+                            </div>
+                        </div>
+                        <div class="model-content">
+                            <h3>T3 Chat</h3>
+                            <p>高性能AI聊天平台，专注于快速响应和精准理解，适合各种专业场景</p>
+                            <div class="model-features">
+                                <span class="feature-tag">快速响应</span>
+                                <span class="feature-tag">精准理解</span>
+                                <span class="feature-tag">专业场景</span>
+                            </div>
+                            <div class="model-stats">
+                                <div class="stat">
+                                    <span class="stat-value">0.5s</span>
+                                    <span class="stat-label">响应时间</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">99.5%</span>
+                                    <span class="stat-label">准确率</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">100+</span>
+                                    <span class="stat-label">场景</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-actions">
+                            <a href="https://t3.chat/chat" target="_blank" class="chat-btn primary">
+                                <i class="fas fa-comments"></i>
+                                开始聊天
+                            </a>
+                            <button class="chat-btn secondary" onclick="showModelDetails('t3')">
+                                <i class="fas fa-info-circle"></i>
+                                了解更多
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-chat-features">
+                    <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>安全可靠</h4>
+                            <p>企业级安全保障，保护您的隐私和数据安全</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>实时更新</h4>
+                            <p>AI模型持续学习和更新，提供最新的知识和能力</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" data-aos="fade-left" data-aos-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>多用户支持</h4>
+                            <p>支持团队协作，多人同时使用，提高工作效率</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO工具目录 -->
+        <section class="seo-tools-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">🔍 Online SEO Tools Directory</h2>
+                <p class="section-subtitle">Discover the best SEO tools and resources to optimize your website and improve search engine rankings</p>
+                
+                <!-- Search Engines -->
+                <div class="category-section">
+                    <h3 class="category-title">Search Engines</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h4 class="tool-title">Google Search</h4>
+                            </div>
+                            <p class="tool-description">Web search engine developed by Google that is the most widely used search engine on the World Wide Web, offering billions of search results every day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics & Intelligence -->
+                <div class="category-section">
+                    <h3 class="category-title">Analytics & Intelligence</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 class="tool-title">Similarweb</h4>
+                            </div>
+                            <p class="tool-description">Similarweb is a digital intelligence platform that provides insights into competitors' web traffic and performance, helping businesses understand their market share and online strategy effectiveness.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-analytics"></i>
+                                </div>
+                                <h4 class="tool-title">Semrush</h4>
+                            </div>
+                            <p class="tool-description">Semrush is an all-in-one marketing toolkit for digital marketing professionals, offering solutions for SEO, PPC, content, social media and competitive research.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <h4 class="tool-title">Ahrefs</h4>
+                            </div>
+                            <p class="tool-description">Ahrefs is a comprehensive SEO tool that offers advanced analysis and insights for link building, keyword research, competitor analysis, and site audits, helping marketers and SEO professionals optimize their online presence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Tools -->
+                <div class="category-section">
+                    <h3 class="category-title">SEO Tools</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <h4 class="tool-title">Keyword Difficulty Checker</h4>
+                            </div>
+                            <p class="tool-description">Ahrefs' Keyword Difficulty Checker is a tool that evaluates the effort needed to rank in the top 10 search results for a given keyword, using a comprehensive analysis of backlink profiles and various ranking factors.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                                <h4 class="tool-title">Backlink Checker</h4>
+                            </div>
+                            <p class="tool-description">Ahrefs' Backlink Checker is a tool that allows users to analyze the backlink profile of any website, revealing insights into the number and quality of backlinks.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4 class="tool-title">Website "Authority" Checker</h4>
+                            </div>
+                            <p class="tool-description">The Ahrefs Website Authority Checker is a tool that allows you to check the 'authority' of your domain, calculated as the Domain Rating (DR) by Ahrefs, which reflects the strength and quality of a website's backlink profile.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <h4 class="tool-title">WooRank SEO Health Checker</h4>
+                            </div>
+                            <p class="tool-description">To get started with your website optimization, you need to know how your website scores. Run your Review today to get an instant website analysis and learn what you need to do to improve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Tools -->
+                <div class="category-section">
+                    <h3 class="category-title">Google Tools</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                                <h4 class="tool-title">Google Search Console</h4>
+                            </div>
+                            <p class="tool-description">A free service offered by Google that helps you monitor, maintain, and troubleshoot your site's presence in Google Search results.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <h4 class="tool-title">Google Analytics</h4>
+                            </div>
+                            <p class="tool-description">Google Analytics is a web analytics service offered by Google that tracks and reports website traffic.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h4 class="tool-title">Microsoft Clarity</h4>
+                            </div>
+                            <p class="tool-description">Clarity is a free tool that captures how people use your site. Setup is easy and you'll start getting data in minutes.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-tags"></i>
+                                </div>
+                                <h4 class="tool-title">Google Tag Manager</h4>
+                            </div>
+                            <p class="tool-description">Without editing your site code, use Tag Manager to add and update Google Ads, Google Analytics, Floodlight, and third-party tags. Get started for web sites.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Tools -->
+                <div class="category-section">
+                    <h3 class="category-title">Performance Tools</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h4 class="tool-title">PageSpeed Insights</h4>
+                            </div>
+                            <p class="tool-description">PageSpeed Insights (PSI) reports on the user experience of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-speed"></i>
+                                </div>
+                                <h4 class="tool-title">GTmetrix</h4>
+                            </div>
+                            <p class="tool-description">GTmetrix is a free tool to test and monitor your page's performance. Using Lighthouse, GTmetrix generates scores for your pages and offers actionable recommendations on how to optimize them.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-route"></i>
+                                </div>
+                                <h4 class="tool-title">WhereGoes</h4>
+                            </div>
+                            <p class="tool-description">WhereGoes is a website that allows users to trace the path of a URL, showing its redirections and where it ends up.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Browser Extensions -->
+                <div class="category-section">
+                    <h3 class="category-title">SEO Extensions</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h4 class="tool-title">Website Traffic Rank</h4>
+                            </div>
+                            <p class="tool-description">Similarweb free website traffic rank extension.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <h4 class="tool-title">Similarsites Finder</h4>
+                            </div>
+                            <p class="tool-description">Easily Explore alternative websites.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <h4 class="tool-title">Detailed SEO Extension</h4>
+                            </div>
+                            <p class="tool-description">Finally, an SEO extension built for full-time SEOs. Built by SEOs, for SEOs. Free forever.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-toolbox"></i>
+                                </div>
+                                <h4 class="tool-title">Ahrefs SEO Toolbar</h4>
+                            </div>
+                            <p class="tool-description">Ahrefs SEO Toolbar is a free extension for Chrome and Firefox that provides valuable SEO data about the pages and websites you visit. 200k+ SEO professionals across the world use it in their daily work.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                                <h4 class="tool-title">Keywords Everywhere</h4>
+                            </div>
+                            <p class="tool-description">Online marketing research without breaking the bank. Do SEO, content marketing, competitor research, PPC and social media marketing right as you browse the web.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4 class="tool-title">WooRank Extension</h4>
+                            </div>
+                            <p class="tool-description">Check the basic SEO health and score of any website with our free extension.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="700">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-traffic-light"></i>
+                                </div>
+                                <h4 class="tool-title">AITDK Extension</h4>
+                            </div>
+                            <p class="tool-description">Free traffic & whois & website seo analysis extension.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="800">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4 class="tool-title">Wappalyzer Extension</h4>
+                            </div>
+                            <p class="tool-description">Wappalyzer is a cross-platform utility that uncovers the technologies used on websites. It detects content management systems, ecommerce platforms, web frameworks, server software, analytics tools and many more.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Blogs -->
+                <div class="category-section">
+                    <h3 class="category-title">SEO Blog</h3>
+                    <div class="seo-tools-grid">
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-blog"></i>
+                                </div>
+                                <h4 class="tool-title">Google Search Blog</h4>
+                            </div>
+                            <p class="tool-description">Google Search official blog, read the latest news and updates about Google Search.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <h4 class="tool-title">Google Search Central Blog</h4>
+                            </div>
+                            <p class="tool-description">The Google Search Central Blog is where you can find official Google Search core algorithm updates, announcements of new Google Search features, and SEO best practices.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-rss"></i>
+                                </div>
+                                <h4 class="tool-title">Semrush Blog</h4>
+                            </div>
+                            <p class="tool-description">The SEO, SEM, PPC and Content Marketing Blog.</p>
+                        </div>
+                        
+                        <div class="seo-tool-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="tool-header">
+                                <div class="tool-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <h4 class="tool-title">Backlinko Blog</h4>
+                            </div>
+                            <p class="tool-description">Where SEO best practices meet real-world results. Backlinko is the place for next-level SEO training and link building strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新动态 -->
+        <section class="news-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">最新动态</h2>
+                <div class="news-grid">
+                    <div class="news-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="news-image">
+                            <img src="https://via.placeholder.com/300x200/00ff88/000000?text=新游戏上线" alt="新游戏">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">新游戏</span>
+                            <h3>《星际冒险》震撼上线</h3>
+                            <p>探索浩瀚宇宙，体验前所未有的太空冒险之旅</p>
+                            <span class="news-date">2024-01-15</span>
+                        </div>
+                    </div>
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="news-image">
+                            <img src="https://via.placeholder.com/300x200/00ccff/000000?text=活动公告" alt="活动">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">活动</span>
+                            <h3>春节特别活动开启</h3>
+                            <p>参与春节活动，获得限定皮肤和丰厚奖励</p>
+                            <span class="news-date">2024-01-10</span>
+                        </div>
+                    </div>
+                    <div class="news-card" data-aos="fade-left" data-aos-delay="300">
+                        <div class="news-image">
+                            <img src="https://via.placeholder.com/300x200/ff6b6b/000000?text=更新公告" alt="更新">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">更新</span>
+                            <h3>系统优化升级完成</h3>
+                            <p>全新的用户界面和更流畅的游戏体验</p>
+                            <span class="news-date">2024-01-05</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于GameHub</h3>
+                <p>我们致力于为玩家提供最好的游戏体验，汇集全球顶级游戏内容。</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="#">热门游戏</a></li>
+                    <li><a href="#">最新游戏</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="ailinks.html">AI工具</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏分类</h3>
+                <ul>
+                    <li><a href="#">动作冒险</a></li>
+                    <li><a href="#">策略益智</a></li>
+                    <li><a href="#">竞速体育</a></li>
+                    <li><a href="#">模拟经营</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@gamehub.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 游戏世界，虚拟空间</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GameHub. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // 初始化AOS动画
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // 粒子效果配置
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#00ff88'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#00ff88',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // 返回顶部功能
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 

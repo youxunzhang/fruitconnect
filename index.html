@@ -2,39 +2,81 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
- 
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437"
-     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8NB90Q1C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<meta name="google-adsense-account" content="ca-pub-8794607118520437">
-
+  gtag('config', 'G-1P8NB90Q1C');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437"
+        crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-8794607118520437">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHub - 欧美流行游戏平台</title>
+    <title>GameHub - 未来游戏世界</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- 添加html2canvas库用于游戏截图 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- AI图像生成配置文件 -->
     <script src="config.js"></script>
+    <!-- 添加粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 添加AOS动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 添加Three.js用于3D效果 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- 添加GSAP动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
+    <!-- 动态背景 -->
+    <div id="particles-js"></div>
+    <div class="cyber-grid"></div>
+    <div class="neon-lines"></div>
+    
+    <!-- 加载动画 -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
                 <i class="fas fa-gamepad"></i>
                 <span>GameHub</span>
             </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-text">正在进入游戏世界...</div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar cyber-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-glow"></div>
+                <i class="fas fa-gamepad"></i>
+                <span>GameHub</span>
+                <div class="logo-particles"></div>
+            </div>
             <div class="nav-menu">
-                <a href="#" class="nav-link active">首页</a>
-                <a href="#" class="nav-link">热门游戏</a>
-                <a href="#" class="nav-link">最新游戏</a>
-                <a href="#" class="nav-link">分类</a>
-                <a href="#" class="nav-link">排行榜</a>
+                <a href="#" class="nav-link active" data-text="首页">首页</a>
+                <a href="#" class="nav-link" data-text="热门游戏">热门游戏</a>
+                <a href="#" class="nav-link" data-text="最新游戏">最新游戏</a>
+                <a href="#" class="nav-link" data-text="分类">分类</a>
+                <a href="#" class="nav-link" data-text="排行榜">排行榜</a>
+                <a href="ailinks.html" class="nav-link" data-text="AI工具">AI工具</a>
             </div>
             <div class="nav-search">
-                <input type="text" placeholder="搜索游戏...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="搜索游戏..." class="cyber-input">
+                <button class="cyber-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-user">
+                <button class="user-btn cyber-btn"><i class="fas fa-user"></i></button>
+                <button class="notification-btn cyber-btn"><i class="fas fa-bell"></i></button>
             </div>
         </div>
     </nav>
@@ -42,73 +84,128 @@
     <!-- 主要内容 -->
     <main class="main-content">
         <!-- 英雄区域 -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>发现最酷的游戏世界</h1>
-                <p>体验来自全球的顶级游戏，享受无与伦比的游戏乐趣</p>
-                <p style="font-size: 1rem; color: #00ff88; margin-bottom: 1rem;">🎮 特色游戏：面包店管理模拟器</p>
-                <button class="cta-button">立即开始</button>
-            </div>
-            <div class="hero-game">
-                <iframe src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}"
-          width="100%" height="480" scrolling="no" frameborder="0" allowfullscreen style="border-radius: 18px; box-shadow: 0 4px 24px #43c6ac33; background: #fff;"></iframe>
-            </div>
-        </section>
-
-        <!-- 游戏网格 -->
-        <section class="games-section">
-            <div class="section-header">
-                <h2>热门游戏</h2>
-                <div class="filter-buttons">
-                    <button class="filter-btn active">全部</button>
-                    <button class="filter-btn">动作</button>
-                    <button class="filter-btn">策略</button>
-                    <button class="filter-btn">益智</button>
-                    <button class="filter-btn">冒险</button>
-                    <button class="filter-btn">模拟</button>
-                    <button class="filter-btn">竞速</button>
-                    <button class="filter-btn">生存</button>
+        <section class="hero-section cyber-hero">
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-icon" data-speed="2"><i class="fas fa-rocket"></i></div>
+                    <div class="floating-icon" data-speed="1.5"><i class="fas fa-star"></i></div>
+                    <div class="floating-icon" data-speed="3"><i class="fas fa-gem"></i></div>
+                    <div class="floating-icon" data-speed="2.5"><i class="fas fa-crown"></i></div>
                 </div>
             </div>
-            
-            <div class="games-grid" id="gamesGrid">
-                <!-- 游戏卡片将通过JavaScript动态生成 -->
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-badge cyber-badge">
+                    <span>🔥 进入未来游戏世界</span>
+                </div>
+                <h1 class="hero-title cyber-title">
+                    <span class="title-line glitch" data-text="欢迎来到">欢迎来到</span>
+                    <span class="title-line highlight neon-text" data-text="GameHub">GameHub</span>
+                    <span class="title-line glitch" data-text="游戏世界">游戏世界</span>
+                </h1>
+                <p class="hero-subtitle cyber-subtitle">体验最前沿的AI技术，与智能助手对话，探索无限可能</p>
+                <div class="hero-features cyber-features">
+                    <div class="feature-item cyber-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span>AI智能对话</span>
+                    </div>
+                    <div class="feature-item cyber-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span>深度学习</span>
+                    </div>
+                    <div class="feature-item cyber-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <span>创意无限</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <button class="cta-button primary cyber-btn">
+                        <i class="fas fa-play"></i>
+                        <span>开始探索</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="cta-button secondary cyber-btn">
+                        <i class="fas fa-info-circle"></i>
+                        <span>了解更多</span>
+                    </button>
+                </div>
+                <div class="hero-stats cyber-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="9999">0</span>
+                        <span class="stat-label">活跃用户</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">AI模型</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="24">0</span>
+                        <span class="stat-label">小时在线</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+                <div class="cyber-cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+                <div class="hologram-effect">
+                    <div class="hologram-circle"></div>
+                    <div class="hologram-circle"></div>
+                    <div class="hologram-circle"></div>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer class="footer cyber-footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>关于GameHub</h3>
+                <h3 class="neon-text">关于GameHub</h3>
                 <p>我们致力于为玩家提供最好的游戏体验，汇集全球顶级游戏内容。</p>
+                <div class="footer-social">
+                    <a href="#" class="cyber-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="cyber-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="cyber-link"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <div class="footer-section">
-                <h3>快速链接</h3>
+                <h3 class="neon-text">快速链接</h3>
                 <ul>
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">热门游戏</a></li>
-                    <li><a href="#">最新游戏</a></li>
-                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#" class="cyber-link">首页</a></li>
+                    <li><a href="#" class="cyber-link">热门游戏</a></li>
+                    <li><a href="#" class="cyber-link">最新游戏</a></li>
+                    <li><a href="#" class="cyber-link">排行榜</a></li>
+                    <li><a href="ailinks.html" class="cyber-link">AI工具</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>联系我们</h3>
+                <h3 class="neon-text">游戏分类</h3>
+                <ul>
+                    <li><a href="#" class="cyber-link">动作冒险</a></li>
+                    <li><a href="#" class="cyber-link">策略益智</a></li>
+                    <li><a href="#" class="cyber-link">竞速体育</a></li>
+                    <li><a href="#" class="cyber-link">模拟经营</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="neon-text">联系我们</h3>
                 <ul>
                     <li><i class="fas fa-envelope"></i> contact@gamehub.com</li>
                     <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
                     <li><i class="fas fa-map-marker-alt"></i> 游戏世界，虚拟空间</li>
                 </ul>
-            </div>
-            <div class="footer-section">
-                <h3>关注我们</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -116,6 +213,230 @@
         </div>
     </footer>
 
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top cyber-btn" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+        <div class="btn-glow"></div>
+    </button>
+
     <script src="script.js"></script>
+    <script>
+        // 初始化GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 加载动画
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            gsap.to(loadingScreen, {
+                opacity: 0,
+                duration: 1,
+                onComplete: () => {
+                    loadingScreen.style.display = 'none';
+                    initAnimations();
+                }
+            });
+        });
+
+        // 初始化动画
+        function initAnimations() {
+            // 数字动画
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                gsap.to(stat, {
+                    textContent: target,
+                    duration: 2,
+                    ease: "power2.out",
+                    snap: { textContent: 1 },
+                    scrollTrigger: {
+                        trigger: stat,
+                        start: "top 80%"
+                    }
+                });
+            });
+
+            // 浮动元素动画
+            const floatingElements = document.querySelectorAll('.floating-icon');
+            floatingElements.forEach(element => {
+                const speed = element.getAttribute('data-speed');
+                gsap.to(element, {
+                    y: -50,
+                    rotation: 360,
+                    duration: 3 * speed,
+                    repeat: -1,
+                    ease: "none",
+                    yoyo: true
+                });
+            });
+
+            // 立方体旋转
+            const cube = document.querySelector('.cyber-cube');
+            gsap.to(cube, {
+                rotationY: 360,
+                rotationX: 360,
+                duration: 20,
+                repeat: -1,
+                ease: "none"
+            });
+
+            // 全息图效果
+            const hologramCircles = document.querySelectorAll('.hologram-circle');
+            hologramCircles.forEach((circle, index) => {
+                gsap.to(circle, {
+                    scale: 1.5,
+                    opacity: 0,
+                    duration: 2,
+                    repeat: -1,
+                    delay: index * 0.5,
+                    ease: "power2.out"
+                });
+            });
+        }
+
+        // 初始化AOS动画
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // 粒子效果配置
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ["#00ff88", "#00ccff", "#ff6b6b", "#ffd700"]
+                },
+                shape: {
+                    type: ["circle", "triangle", "star"],
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.6,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 4,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00ff88",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: true,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        // 返回顶部功能
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+                gsap.to(backToTop, { opacity: 1, duration: 0.3 });
+            } else {
+                gsap.to(backToTop, { opacity: 0, duration: 0.3, onComplete: () => {
+                    backToTop.style.display = 'none';
+                }});
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            gsap.to(window, {
+                scrollTo: 0,
+                duration: 1,
+                ease: "power2.out"
+            });
+        });
+
+        // 鼠标跟随效果
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.createElement('div');
+            cursor.className = 'cursor-trail';
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+            document.body.appendChild(cursor);
+            
+            setTimeout(() => {
+                cursor.remove();
+            }, 1000);
+        });
+    </script>
 </body>
 </html> 

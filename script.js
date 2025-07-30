@@ -102,449 +102,218 @@ const gamesData = [
     },
     {
         id: 11,
-        title: "Crazy Cattle 3D 3",
-        category: "模拟",
-        rating: 4.1,
-        image: "https://images.unsplash.com/photo-1500595046743-cd271d694e30?w=300&h=200&fit=crop&crop=center&random=2",
-        iframe: "https://yujiandemo.com/",
-        description: "疯狂的3D牛群模拟游戏第三部",
-        screenshotUrl: null
-    },
-    {
-        id: 22,
-        title: "赛车竞速",
-        category: "竞速",
-        rating: 4.3,
-        image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/14e87fab0cbf44b6b3e57ddb77af5941/?gd_sdk_referrer_url=https://crazycattle3d.com/games/tunnel-road&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "刺激的赛车竞速游戏"
-    },
-    {
-        id: 23,
-        title: "平台跳跃冒险",
-        category: "动作",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/bc2f52c2d9d04e41aee48bef01075d22/?gd_sdk_referrer_url=https://crazycattle3d.com/games/obby-on-a-bike&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "经典的平台跳跃游戏"
-    },
-    {
-        id: 24,
-        title: "花朵消除",
+        title: "贪吃蛇大作战",
         category: "益智",
         rating: 4.6,
-        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/2e5863b7cc10444a88f72c81e74502f1/?gd_sdk_referrer_url=https://crazycattle3d.com/games/merge-flowers&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "三消类游戏"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&crop=center",
+        iframe: "snake-game.html",
+        description: "经典贪吃蛇游戏，控制蛇吃食物不断成长",
+        screenshotUrl: null,
+        isLocalGame: true
     },
     {
-        id: 25,
-        title: "塔楼碰撞",
-        category: "动作",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/b375b05ea29b40abaaf3606a2ff215ad/?gd_sdk_referrer_url=https://crazycattle3d.com/games/tower-crash-3d&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "经典的塔防游戏"
-    },
-    {
-        id: 26,
-        title: "雪地竞速",
-        category: "竞速",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/e1e32230bdf040d69f4e367015e1c527/?gd_sdk_referrer_url=https://crazycattle3d.com/games/snow-rush-3d&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "角色扮演冒险游戏"
-    },
-    {
-        id: 27,
-        title: "奶酪吞噬者",
+        id: 12,
+        title: "弹球游戏",
         category: "动作",
         rating: 4.5,
-        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://cheesechompers-3d.io/game/165/",
-        description: "复杂的解谜游戏"
+        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=2",
+        iframe: "pong-game.html",
+        description: "经典弹球游戏，用挡板反弹球体",
+        screenshotUrl: null,
+        isLocalGame: true
     },
     {
-        id: 28,
-        title: "翻转冒险",
-        category: "动作",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://1games.io/game/wacky-flip",
-        description: "音乐节奏游戏"
-    },
-    {
-        id: 29,
-        title: "猫咪模拟器",
-        category: "模拟",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/427f3a980dfc48e69e4329acdb5b9d8b/?gd_sdk_referrer_url=https://crazycattle3d.com/games/cat-chaos-simulator&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "模拟经营类游戏"
-    },
-    {
-        id: 30,
-        title: "疯狂牛群",
-        category: "模拟",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1500595046743-cd271d694e30?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://yujiandemo.com/",
-        description: "卡牌收集对战游戏"
-    },
-    {
-        id: 31,
-        title: "牛群模拟器2",
-        category: "模拟",
-        rating: 4.3,
-        image: "https://images.unsplash.com/photo-1500595046743-cd271d694e30?w=300&h=200&fit=crop&crop=center&random=1",
-        iframe: "https://yujiandemo.com/",
-        description: "格斗对战游戏"
-    },
-    {
-        id: 32,
-        title: "牛群模拟器3",
-        category: "模拟",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1500595046743-cd271d694e30?w=300&h=200&fit=crop&crop=center&random=2",
-        iframe: "https://yujiandemo.com/",
-        description: "第一人称射击游戏"
-    },
-    {
-        id: 33,
-        title: "Monster Survivors",
-        category: "生存",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center&random=monster",
-        iframe: "https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html",
-        description: "怪物生存游戏，在危险世界中生存并击败怪物",
-        screenshotUrl: null
-    },
-    {
-        id: 34,
-        title: "隧道竞速",
-        category: "竞速",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=300&h=200&fit=crop&crop=center&random=3",
-        iframe: "https://html5.gamedistribution.com/14e87fab0cbf44b6b3e57ddb77af5941/?gd_sdk_referrer_url=https://crazycattle3d.com/games/tunnel-road&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "生存冒险游戏"
-    },
-    {
-        id: 35,
-        title: "雪地滑行",
-        category: "竞速",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=300&h=200&fit=crop&crop=center&random=4",
-        iframe: "https://html5.gamedistribution.com/e1e32230bdf040d69f4e367015e1c527/?gd_sdk_referrer_url=https://crazycattle3d.com/games/snow-rush-3d&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "建造类游戏"
-    },
-    {
-        id: 36,
-        title: "塔楼破坏",
-        category: "动作",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center&random=5",
-        iframe: "https://html5.gamedistribution.com/b375b05ea29b40abaaf3606a2ff215ad/?gd_sdk_referrer_url=https://crazycattle3d.com/games/tower-crash-3d&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "探索冒险游戏"
-    },
-    {
-        id: 37,
-        title: "花朵合并",
-        category: "益智",
-        rating: 4.3,
-        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center&random=6",
-        iframe: "https://html5.gamedistribution.com/2e5863b7cc10444a88f72c81e74502f1/?gd_sdk_referrer_url=https://crazycattle3d.com/games/merge-flowers&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "竞速类游戏"
-    },
-    {
-        id: 38,
-        title: "自行车冒险",
-        category: "冒险",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=300&h=200&fit=crop&crop=center&random=7",
-        iframe: "https://html5.gamedistribution.com/bc2f52c2d9d04e41aee48bef01075d22/?gd_sdk_referrer_url=https://crazycattle3d.com/games/obby-on-a-bike&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "策略类游戏"
-    },
-    {
-        id: 39,
-        title: "猫咪世界",
-        category: "模拟",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=200&fit=crop&crop=center&random=8",
-        iframe: "https://html5.gamedistribution.com/427f3a980dfc48e69e4329acdb5b9d8b/?gd_sdk_referrer_url=https://crazycattle3d.com/games/cat-chaos-simulator&gdpr-tracking=1&gdpr-targeting=1&gdpr-third-party=1",
-        description: "益智类游戏"
-    },
-    {
-        id: 40,
-        title: "翻转挑战",
-        category: "动作",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=9",
-        iframe: "https://1games.io/game/wacky-flip",
-        description: "动作类游戏"
-    },
-    {
-        id: 41,
-        title: "奶酪冒险",
-        category: "动作",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop&crop=center&random=10",
-        iframe: "https://cheesechompers-3d.io/game/165/",
-        description: "冒险类游戏"
-    },
-    {
-        id: 42,
-        title: "体育竞技",
-        category: "动作",
-        rating: 4.3,
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "体育类游戏"
-    },
-    {
-        id: 43,
-        title: "音乐节奏",
-        category: "动作",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "音乐类游戏"
-    },
-    {
-        id: 44,
-        title: "教育益智",
-        category: "益智",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "教育类游戏"
-    },
-    {
-        id: 45,
-        title: "休闲时光",
-        category: "益智",
-        rating: 4.2,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=11",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "休闲类游戏"
-    },
-    {
-        id: 46,
-        title: "角色扮演",
-        category: "冒险",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=300&h=200&fit=crop&crop=center&random=12",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "角色扮演游戏"
-    },
-    {
-        id: 47,
-        title: "模拟经营",
-        category: "策略",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1500595046743-cd271d694e30?w=300&h=200&fit=crop&crop=center&random=13",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "模拟类游戏"
-    },
-    {
-        id: 48,
-        title: "卡牌对战",
-        category: "策略",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=14",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "卡牌类游戏"
-    },
-    {
-        id: 49,
-        title: "桌游策略",
-        category: "策略",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=300&h=200&fit=crop&crop=center&random=15",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "桌游类游戏"
-    },
-    {
-        id: 50,
-        title: "街机经典",
-        category: "动作",
-        rating: 4.3,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=16",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "街机类游戏"
-    },
-    {
-        id: 51,
-        title: "经典合集",
+        id: 13,
+        title: "2048数字游戏",
         category: "益智",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center&random=17",
-        iframe: "https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "经典游戏合集"
-    },
-    {
-        id: 52,
-        title: "Memoji",
-        category: "益智",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=memoji",
-        iframe: "https://html5.gamedistribution.com/50c56858d355416ba84e18c68321a69b/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "表情符号记忆游戏，挑战你的记忆力",
-        screenshotUrl: null
-    },
-    {
-        id: 53,
-        title: "Cityquest",
-        category: "冒险",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=300&h=200&fit=crop&crop=center&random=cityquest",
-        iframe: "https://html5.gamedistribution.com/31068f4a88af4d3da31feeeddaeb44c8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "城市探索冒险游戏，发现城市的秘密",
-        screenshotUrl: null
-    },
-    {
-        id: 54,
-        title: "10K",
-        category: "益智",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=10k",
-        iframe: "https://html5.gamedistribution.com/3acc054600054896b62bda751eaef869/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "数字益智游戏，挑战你的数学思维",
-        screenshotUrl: null
-    },
-    {
-        id: 55,
-        title: "Phrasle Master",
-        category: "益智",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center&random=phrasle",
-        iframe: "https://html5.gamedistribution.com/1adf969783854409b65b5ccb0873ea8a/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "短语猜谜游戏，测试你的词汇量",
-        screenshotUrl: null
-    },
-    {
-        id: 56,
-        title: "Word Search",
-        category: "益智",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=wordsearch",
-        iframe: "https://html5.gamedistribution.com/c13ee9c06edc4f0a8d7f6f291a7c13d8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "单词搜索游戏，在字母网格中寻找隐藏单词",
-        screenshotUrl: null
-    },
-    {
-        id: 57,
-        title: "Kitty Scramble",
-        category: "益智",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=200&fit=crop&crop=center&random=kitty",
-        iframe: "https://html5.gamedistribution.com/944186abe50e452dac7f0e8d3e0a8814/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "可爱猫咪主题的单词拼图游戏",
-        screenshotUrl: null
-    },
-    {
-        id: 58,
-        title: "Daily Crossword",
-        category: "益智",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=crossword",
-        iframe: "https://html5.gamedistribution.com/e74d9a4123fb4880bc5e3d7664c9dcc9/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "每日填字游戏，挑战你的词汇和知识",
-        screenshotUrl: null
-    },
-    {
-        id: 59,
-        title: "Hexa",
-        category: "益智",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center&random=hexa",
-        iframe: "https://html5.gamedistribution.com/ab1984b4b1314e1dab545a34b62bce47/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "六边形益智游戏，考验你的空间思维",
-        screenshotUrl: null
-    },
-    {
-        id: 60,
-        title: "Daily Sudoku",
-        category: "益智",
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=sudoku",
-        iframe: "https://html5.gamedistribution.com/dd9701cd84da40699cdc404645f29c1f/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "每日数独游戏，锻炼逻辑思维能力",
-        screenshotUrl: null
-    },
-    {
-        id: 61,
-        title: "Crocword Crossword Puzzle Game",
-        category: "益智",
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center&random=crocword",
-        iframe: "https://html5.gamedistribution.com/3e314ff40f40472f9aefed5b046f6dcc/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "鳄鱼主题填字游戏，趣味横生的词汇挑战",
-        screenshotUrl: null
-    },
-    {
-        id: 62,
-        title: "Daily Jigsaw",
-        category: "益智",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop&crop=center&random=jigsaw",
-        iframe: "https://html5.gamedistribution.com/5eebb19f0fcd43849721b95ecf53a700/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "每日拼图游戏，享受拼图的乐趣",
-        screenshotUrl: null
-    },
-    {
-        id: 63,
-        title: "Word Swipe",
-        category: "益智",
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=wordswipe",
-        iframe: "https://html5.gamedistribution.com/ef4b392680554564abe1a3d3917a754b/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "滑动单词游戏，通过滑动连接字母组成单词",
-        screenshotUrl: null
-    },
-    {
-        id: 64,
-        title: "Word Sauce",
-        category: "益智",
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center&random=wordsauce",
-        iframe: "https://html5.gamedistribution.com/8d8965a1f1af4d2b884e0bc48737925d/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "单词汤游戏，在字母汤中寻找隐藏单词",
-        screenshotUrl: null
-    },
-    {
-        id: 65,
-        title: "4 Pix Word Quiz",
-        category: "益智",
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop&crop=center&random=4pix",
-        iframe: "https://html5.gamedistribution.com/992bf414c2fd4a7d8160bcbafd99b6f3/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}",
-        description: "四图猜词游戏，根据四张图片猜出共同单词",
-        screenshotUrl: null
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&crop=center&random=3",
+        iframe: "2048-game.html",
+        description: "数字合并游戏，挑战你的逻辑思维",
+        screenshotUrl: null,
+        isLocalGame: true
     }
 ];
 
-// 当前过滤类别
-let currentFilter = '全部';
+// 当前过滤状态
+let currentFilter = 'all';
 
-// 初始化页面
+// 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', function() {
-    renderGames();
+    initializePage();
     setupEventListeners();
-    
-    // 初始化AI图像生成功能
+    renderGames();
     initAIImageGeneration();
+    initScrollEffects();
+    initStatisticsAnimation();
+    initCategoryCards();
+    initAIChatStats(); // 添加AI聊天模型统计动画初始化
 });
 
-// 渲染游戏卡片
-function renderGames(filter = '全部') {
-    const gamesGrid = document.getElementById('gamesGrid');
-    const filteredGames = filter === '全部' ? gamesData : gamesData.filter(game => game.category === filter);
+// 初始化页面
+function initializePage() {
+    console.log('GameHub 初始化中...');
     
+    // 添加页面加载动画
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    }, 100);
+}
+
+// 初始化滚动效果
+function initScrollEffects() {
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
+
+// 初始化统计数字动画
+function initStatisticsAnimation() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumber(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => observer.observe(stat));
+}
+
+// 数字动画函数
+function animateNumber(element) {
+    const finalValue = element.textContent;
+    const isPercentage = finalValue.includes('%');
+    const isPlus = finalValue.includes('+');
+    const isSlash = finalValue.includes('/');
+    
+    let numericValue;
+    if (isPercentage) {
+        numericValue = parseInt(finalValue.replace('%', ''));
+    } else if (isPlus) {
+        numericValue = parseInt(finalValue.replace('+', ''));
+    } else if (isSlash) {
+        numericValue = parseInt(finalValue.split('/')[0]);
+    } else {
+        numericValue = parseInt(finalValue);
+    }
+    
+    let currentValue = 0;
+    const increment = numericValue / 50;
+    const timer = setInterval(() => {
+        currentValue += increment;
+        if (currentValue >= numericValue) {
+            currentValue = numericValue;
+            clearInterval(timer);
+        }
+        
+        let displayValue = Math.floor(currentValue);
+        if (isPercentage) {
+            element.textContent = displayValue + '%';
+        } else if (isPlus) {
+            element.textContent = displayValue + '+';
+        } else if (isSlash) {
+            element.textContent = displayValue + '/7';
+        } else {
+            element.textContent = displayValue;
+        }
+    }, 30);
+}
+
+// 初始化分类卡片
+function initCategoryCards() {
+    const categoryCards = document.querySelectorAll('.category-card');
+    
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const category = card.querySelector('h3').textContent;
+            filterGamesByCategory(category);
+            
+            // 滚动到游戏区域
+            document.querySelector('.games-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+// 根据分类过滤游戏
+function filterGamesByCategory(category) {
+    const categoryMap = {
+        '动作冒险': 'action',
+        '策略益智': 'strategy',
+        '竞速体育': 'racing',
+        '模拟经营': 'simulation'
+    };
+    
+    const filterValue = categoryMap[category] || 'all';
+    currentFilter = filterValue;
+    
+    // 更新按钮状态
+    updateFilterButtons(filterValue);
+    
+    // 重新渲染游戏
+    renderGames();
+}
+
+// 更新过滤按钮状态
+function updateFilterButtons(activeFilter) {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === activeFilter) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+// 渲染游戏列表
+function renderGames(filter = 'all') {
+    const gamesGrid = document.getElementById('gamesGrid');
+    if (!gamesGrid) return;
+    
+    // 清空现有内容
     gamesGrid.innerHTML = '';
     
+    // 过滤游戏
+    let filteredGames = gamesData;
+    if (filter !== 'all') {
+        const categoryMap = {
+            'action': '动作',
+            'strategy': '策略',
+            'puzzle': '益智',
+            'adventure': '冒险',
+            'simulation': '模拟',
+            'racing': '竞速',
+            'survival': '生存'
+        };
+        
+        const targetCategory = categoryMap[filter];
+        filteredGames = gamesData.filter(game => game.category === targetCategory);
+    }
+    
+    // 创建游戏卡片
     filteredGames.forEach(game => {
         const gameCard = createGameCard(game);
         gamesGrid.appendChild(gameCard);
+    });
+    
+    // 添加动画效果
+    const cards = gamesGrid.querySelectorAll('.game-card');
+    cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
     });
 }
 
@@ -552,527 +321,276 @@ function renderGames(filter = '全部') {
 function createGameCard(game) {
     const card = document.createElement('div');
     card.className = 'game-card';
-    card.setAttribute('data-game-id', game.id);
+    card.setAttribute('data-aos', 'fade-up');
+    card.setAttribute('data-aos-delay', Math.random() * 500);
+    
+    // 使用生成的图片或默认图片
+    const imageUrl = game.screenshotUrl || game.image;
+    
+    // 为本地游戏添加特殊标识
+    const localGameBadge = game.isLocalGame ? '<div class="local-game-badge">🎮 本地游戏</div>' : '';
     
     card.innerHTML = `
         <div class="game-image">
-            <img src="${game.image}" alt="${game.title}" onerror="this.style.display='none'">
+            <img src="${imageUrl}" alt="${game.title}" loading="lazy">
+            <div class="game-overlay">
+                <button class="play-btn" onclick="openGameDetail(${game.id})">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+            ${localGameBadge}
         </div>
         <div class="game-info">
-            <h3>${game.title}</h3>
-            <div class="game-meta">
-                <span class="category">${game.category}</span>
-                <span class="rating">⭐ ${game.rating}</span>
+            <h3 class="game-title">${game.title}</h3>
+            <p class="game-category">${game.category}</p>
+            <div class="game-rating">
+                <div class="stars">
+                    ${generateStars(game.rating)}
+                </div>
+                <span class="rating-text">${game.rating}</span>
             </div>
-            <p>${game.description}</p>
+            <p class="game-description">${game.description}</p>
+            <div class="game-actions">
+                <button class="action-btn primary" onclick="openGameDetail(${game.id})">
+                    <i class="fas fa-gamepad"></i>
+                    ${game.isLocalGame ? '立即游戏' : '开始游戏'}
+                </button>
+                <button class="action-btn secondary" onclick="showGameDetails(${game.id})">
+                    <i class="fas fa-info-circle"></i>
+                    详情
+                </button>
+            </div>
         </div>
     `;
-    
-    card.addEventListener('click', () => {
-        openGameDetail(game);
-    });
     
     return card;
 }
 
+// 生成星级评分
+function generateStars(rating) {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    let stars = '';
+    
+    for (let i = 0; i < fullStars; i++) {
+        stars += '<i class="fas fa-star"></i>';
+    }
+    
+    if (hasHalfStar) {
+        stars += '<i class="fas fa-star-half-alt"></i>';
+    }
+    
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    for (let i = 0; i < emptyStars; i++) {
+        stars += '<i class="far fa-star"></i>';
+    }
+    
+    return stars;
+}
+
 // 设置事件监听器
 function setupEventListeners() {
-    // 过滤按钮
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // 移除所有活动状态
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // 添加当前活动状态
-            this.classList.add('active');
-            
-            const filter = this.textContent;
-            currentFilter = filter;
-            renderGames(filter);
-        });
-    });
-    
     // 搜索功能
     const searchInput = document.querySelector('.nav-search input');
     const searchButton = document.querySelector('.nav-search button');
     
-    searchButton.addEventListener('click', performSearch);
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            performSearch();
-        }
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    }
+    
+    if (searchButton) {
+        searchButton.addEventListener('click', performSearch);
+    }
+    
+    // 过滤按钮
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+            currentFilter = filter;
+            
+            // 更新按钮状态
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // 重新渲染游戏
+            renderGames(filter);
+        });
     });
     
     // CTA按钮
-    const ctaButton = document.querySelector('.cta-button');
-    ctaButton.addEventListener('click', function() {
-        document.querySelector('.games-section').scrollIntoView({ 
-            behavior: 'smooth' 
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (btn.classList.contains('primary')) {
+                // 滚动到游戏区域
+                document.querySelector('.games-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                // 显示更多信息
+                showMoreInfo();
+            }
         });
     });
+    
+    // 用户按钮
+    const userBtn = document.querySelector('.user-btn');
+    const notificationBtn = document.querySelector('.notification-btn');
+    
+    if (userBtn) {
+        userBtn.addEventListener('click', () => {
+            showUserMenu();
+        });
+    }
+    
+    if (notificationBtn) {
+        notificationBtn.addEventListener('click', () => {
+            showNotifications();
+        });
+    }
 }
 
 // 执行搜索
 function performSearch() {
-    const searchTerm = document.querySelector('.nav-search input').value.toLowerCase();
-    const gamesGrid = document.getElementById('gamesGrid');
+    const searchInput = document.querySelector('.nav-search input');
+    const query = searchInput.value.trim().toLowerCase();
     
-    if (!searchTerm) {
+    if (query === '') {
         renderGames(currentFilter);
         return;
     }
     
     const filteredGames = gamesData.filter(game => 
-        game.title.toLowerCase().includes(searchTerm) ||
-        game.category.toLowerCase().includes(searchTerm) ||
-        game.description.toLowerCase().includes(searchTerm)
+        game.title.toLowerCase().includes(query) ||
+        game.category.toLowerCase().includes(query) ||
+        game.description.toLowerCase().includes(query)
     );
     
+    const gamesGrid = document.getElementById('gamesGrid');
     gamesGrid.innerHTML = '';
+    
     filteredGames.forEach(game => {
         const gameCard = createGameCard(game);
         gamesGrid.appendChild(gameCard);
     });
-}
-
-// 打开游戏详情页面
-function openGameDetail(game) {
-    // 创建游戏详情页面URL参数
-    const params = new URLSearchParams({
-        id: game.id,
-        title: game.title,
-        category: game.category,
-        rating: game.rating,
-        iframe: game.iframe,
-        description: game.description
-    });
     
-    // 跳转到游戏详情页面
-    window.location.href = `game-detail.html?${params.toString()}`;
+    // 显示搜索结果提示
+    showSearchResults(filteredGames.length, query);
 }
 
-// 平滑滚动效果
-function smoothScroll(target) {
-    document.querySelector(target).scrollIntoView({
+// 显示搜索结果提示
+function showSearchResults(count, query) {
+    const gamesGrid = document.getElementById('gamesGrid');
+    const resultsInfo = document.createElement('div');
+    resultsInfo.className = 'search-results-info';
+    resultsInfo.innerHTML = `
+        <p>找到 <strong>${count}</strong> 个与 "<strong>${query}</strong>" 相关的游戏</p>
+        <button onclick="clearSearch()" class="clear-search-btn">
+            <i class="fas fa-times"></i>
+            清除搜索
+        </button>
+    `;
+    
+    gamesGrid.insertBefore(resultsInfo, gamesGrid.firstChild);
+}
+
+// 清除搜索
+function clearSearch() {
+    const searchInput = document.querySelector('.nav-search input');
+    searchInput.value = '';
+    renderGames(currentFilter);
+}
+
+// 打开游戏详情
+function openGameDetail(gameId) {
+    const game = gamesData.find(g => g.id === gameId);
+    if (!game) return;
+    
+    // 如果是本地游戏，直接在新窗口打开
+    if (game.isLocalGame) {
+        window.open(game.iframe, '_blank');
+        return;
+    }
+    
+    // 创建模态框
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="game-detail">
+                <h2>${game.title}</h2>
+                <div class="game-frame-container">
+                    <iframe src="${game.iframe}" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="game-info-detail">
+                    <p><strong>分类:</strong> ${game.category}</p>
+                    <p><strong>评分:</strong> ${game.rating}/5.0</p>
+                    <p><strong>描述:</strong> ${game.description}</p>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // 关闭模态框
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.onclick = () => {
+        document.body.removeChild(modal);
+    };
+    
+    modal.onclick = (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+        }
+    };
+}
+
+// 显示游戏详情
+function showGameDetails(gameId) {
+    const game = gamesData.find(g => g.id === gameId);
+    if (!game) return;
+    
+    // 这里可以添加更详细的游戏信息展示
+    alert(`${game.title}\n\n分类: ${game.category}\n评分: ${game.rating}/5.0\n\n${game.description}`);
+}
+
+// 显示更多信息
+function showMoreInfo() {
+    // 滚动到特色功能区域
+    document.querySelector('.features-section').scrollIntoView({
         behavior: 'smooth'
     });
 }
 
-// 添加滚动动画
-window.addEventListener('scroll', function() {
-    const cards = document.querySelectorAll('.game-card');
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        const cardVisible = 150;
-        
-        if (cardTop < window.innerHeight - cardVisible) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }
-    });
-}); 
-
-// 删除 GameScreenshot 类及相关方法和所有 gameScreenshot 的调用
-
-// AI图像生成功能
-class AIImageGenerator {
-    constructor() {
-        this.config = window.AIConfig || {};
-        this.baseUrl = this.config.unsplash?.baseUrl || 'https://api.unsplash.com/search/photos';
-    }
-
-    // 根据游戏信息生成搜索关键词
-    generateSearchKeywords(game) {
-        const { title, description, category } = game;
-        let keywords = [];
-        
-        // 从标题提取关键词
-        const titleWords = title.toLowerCase().split(/[\s\-_]+/);
-        keywords.push(...titleWords.filter(word => word.length > 2));
-        
-        // 从描述提取关键词
-        const descWords = description.toLowerCase().split(/[\s,，。！？]+/);
-        keywords.push(...descWords.filter(word => word.length > 2));
-        
-        // 添加分类关键词
-        const categoryKeywords = {
-            '动作': ['action', 'game', 'adventure'],
-            '竞速': ['racing', 'speed', 'car', 'vehicle'],
-            '益智': ['puzzle', 'brain', 'logic'],
-            '冒险': ['adventure', 'exploration', 'quest'],
-            '模拟': ['simulation', 'realistic', 'life'],
-            '策略': ['strategy', 'tactical', 'planning'],
-            '射击': ['shooting', 'fps', 'gun'],
-            '体育': ['sports', 'athletic', 'competition']
-        };
-        
-        if (categoryKeywords[category]) {
-            keywords.push(...categoryKeywords[category]);
-        }
-        
-        // 去重并限制数量
-        keywords = [...new Set(keywords)].slice(0, 5);
-        
-        return keywords.join(' ');
-    }
-
-    // 使用免费图片服务生成相关图片
-    async generateImageFromFreeServices(game) {
-        try {
-            const keywords = this.generateSearchKeywords(game);
-            
-            // 如果配置了免费模式，使用Lorem Picsum
-            if (this.config.freeMode) {
-                return this.generateFromLoremPicsum(game);
-            }
-            
-            // 尝试使用Unsplash（无需密钥的版本）
-            if (this.config.unsplash?.baseUrl) {
-                const result = await this.generateFromUnsplash(game, keywords);
-                if (result) return result;
-            }
-            
-            // 尝试使用Pixabay
-            if (this.config.pixabay?.apiKey) {
-                const result = await this.generateFromPixabay(game, keywords);
-                if (result) return result;
-            }
-            
-            // 最后使用Lorem Picsum作为备用
-            return this.generateFromLoremPicsum(game);
-            
-        } catch (error) {
-            console.error('免费图片服务生成失败:', error);
-            return this.generateFromLoremPicsum(game);
-        }
-    }
-    
-    // 使用Lorem Picsum生成随机图片
-    generateFromLoremPicsum(game) {
-        const width = this.config.generationParams?.width || 300;
-        const height = this.config.generationParams?.height || 200;
-        const seed = this.generateSeedFromGame(game);
-        
-        return {
-            url: `${this.config.loremPicsum?.baseUrl || 'https://picsum.photos'}/${width}/${height}?random=${seed}`,
-            alt: game.title,
-            generated: true,
-            source: 'Lorem Picsum'
-        };
-    }
-    
-    // 使用Unsplash搜索图片（无需密钥）
-    async generateFromUnsplash(game, keywords) {
-        try {
-            const query = encodeURIComponent(keywords);
-            const url = `${this.config.unsplash?.baseUrl}?query=${query}&per_page=1&orientation=landscape`;
-            
-            const response = await fetch(url);
-            
-            if (!response.ok) {
-                throw new Error('Unsplash API请求失败');
-            }
-            
-            const data = await response.json();
-            if (data.results && data.results.length > 0) {
-                const image = data.results[0];
-                return {
-                    url: image.urls.regular,
-                    alt: image.alt_description || game.title,
-                    photographer: image.user.name,
-                    source: 'Unsplash'
-                };
-            }
-            
-            return null;
-        } catch (error) {
-            console.error('Unsplash图片生成失败:', error);
-            return null;
-        }
-    }
-    
-    // 使用Pixabay搜索图片
-    async generateFromPixabay(game, keywords) {
-        try {
-            const query = encodeURIComponent(keywords);
-            const apiKey = this.config.pixabay?.apiKey;
-            const url = `${this.config.pixabay?.baseUrl}?key=${apiKey}&q=${query}&image_type=photo&per_page=1&orientation=horizontal`;
-            
-            const response = await fetch(url);
-            
-            if (!response.ok) {
-                throw new Error('Pixabay API请求失败');
-            }
-            
-            const data = await response.json();
-            if (data.hits && data.hits.length > 0) {
-                const image = data.hits[0];
-                return {
-                    url: image.webformatURL,
-                    alt: game.title,
-                    photographer: image.user,
-                    source: 'Pixabay'
-                };
-            }
-            
-            return null;
-        } catch (error) {
-            console.error('Pixabay图片生成失败:', error);
-            return null;
-        }
-    }
-    
-    // 根据游戏信息生成种子值
-    generateSeedFromGame(game) {
-        const seedString = `${game.title}${game.category}${game.description}`;
-        let hash = 0;
-        for (let i = 0; i < seedString.length; i++) {
-            const char = seedString.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash = hash & hash; // 转换为32位整数
-        }
-        return Math.abs(hash);
-    }
-
-    // 使用免费的AI图像生成服务（示例）
-    async generateAIImage(game) {
-        try {
-            const prompt = this.generateAIPrompt(game);
-            
-            // 这里可以集成各种AI图像生成API
-            // 例如：Stable Diffusion API, DALL-E API, Midjourney API等
-            
-            // 示例：使用免费的Hugging Face API
-            const response = await fetch(`https://api-inference.huggingface.co/models/${this.config.huggingFace?.model || 'runwayml/stable-diffusion-v1-5'}`, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${this.config.huggingFace?.token || 'YOUR_HUGGING_FACE_TOKEN'}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    inputs: prompt,
-                    parameters: {
-                        width: this.config.generationParams?.width || 512,
-                        height: this.config.generationParams?.height || 512
-                    }
-                })
-            });
-            
-            if (!response.ok) {
-                throw new Error('AI图像生成API请求失败');
-            }
-            
-            const blob = await response.blob();
-            const imageUrl = URL.createObjectURL(blob);
-            
-            return {
-                url: imageUrl,
-                alt: game.title,
-                generated: true
-            };
-        } catch (error) {
-            console.error('AI图像生成失败:', error);
-            return null;
-        }
-    }
-
-    // 生成AI提示词
-    generateAIPrompt(game) {
-        const { title, description, category } = game;
-        
-        // 根据游戏类型生成不同的提示词
-        const categoryPrompts = {
-            '动作': 'action game, dynamic, exciting, colorful',
-            '竞速': 'racing game, speed, vehicles, motion blur',
-            '益智': 'puzzle game, brain teaser, colorful blocks',
-            '冒险': 'adventure game, exploration, fantasy world',
-            '模拟': 'simulation game, realistic, detailed',
-            '策略': 'strategy game, tactical, planning',
-            '射击': 'shooting game, fps, weapons, action',
-            '体育': 'sports game, athletic, competition'
-        };
-        
-        const basePrompt = categoryPrompts[category] || 'video game, colorful, fun';
-        const titleWords = title.toLowerCase().split(/[\s\-_]+/).slice(0, 3).join(' ');
-        
-        return `${titleWords}, ${basePrompt}, game art, digital art, high quality, 4k`;
-    }
-
-    // 批量生成游戏图片
-    async generateImagesForAllGames() {
-        const games = gamesData.filter(game => !game.generatedImage);
-        const results = [];
-        
-        for (let i = 0; i < games.length; i++) {
-            const game = games[i];
-            console.log(`正在为游戏 "${game.title}" 生成图片... (${i + 1}/${games.length})`);
-            
-            try {
-                // 优先使用AI生成，失败则使用免费图片服务
-                let imageResult = await this.generateAIImage(game);
-                
-                if (!imageResult) {
-                    imageResult = await this.generateImageFromFreeServices(game);
-                }
-                
-                if (imageResult) {
-                    game.generatedImage = imageResult.url;
-                    game.image = imageResult.url; // 更新游戏图片
-                    game.imageAlt = imageResult.alt;
-                    
-                    // 保存到本地存储
-                    this.saveGeneratedImage(game.id, imageResult);
-                    
-                    // 更新UI
-                    this.updateGameCardImage(game);
-                    
-                    results.push({
-                        gameId: game.id,
-                        title: game.title,
-                        success: true,
-                        imageUrl: imageResult.url
-                    });
-                } else {
-                    results.push({
-                        gameId: game.id,
-                        title: game.title,
-                        success: false,
-                        error: '图片生成失败'
-                    });
-                }
-                
-                // 添加延迟避免API限制
-                await new Promise(resolve => setTimeout(resolve, this.config.requestDelay || 1000));
-                
-            } catch (error) {
-                console.error(`为游戏 "${game.title}" 生成图片时出错:`, error);
-                results.push({
-                    gameId: game.id,
-                    title: game.title,
-                    success: false,
-                    error: error.message
-                });
-            }
-        }
-        
-        return results;
-    }
-
-    // 保存生成的图片到本地存储
-    saveGeneratedImage(gameId, imageResult) {
-        try {
-            const key = `generated_image_${gameId}`;
-            const data = {
-                url: imageResult.url,
-                alt: imageResult.alt,
-                generated: imageResult.generated || false,
-                timestamp: Date.now()
-            };
-            localStorage.setItem(key, JSON.stringify(data));
-        } catch (error) {
-            console.error('保存生成的图片失败:', error);
-        }
-    }
-
-    // 从本地存储加载生成的图片
-    loadGeneratedImages() {
-        gamesData.forEach(game => {
-            try {
-                const key = `generated_image_${game.id}`;
-                const data = localStorage.getItem(key);
-                
-                if (data) {
-                    const imageData = JSON.parse(data);
-                    game.generatedImage = imageData.url;
-                    game.image = imageData.url;
-                    game.imageAlt = imageData.alt;
-                }
-            } catch (error) {
-                console.error(`加载游戏 ${game.id} 的生成图片失败:`, error);
-            }
-        });
-    }
-
-    // 更新游戏卡片图片
-    updateGameCardImage(game) {
-        const gameCard = document.querySelector(`[data-game-id="${game.id}"]`);
-        if (gameCard) {
-            const imgElement = gameCard.querySelector('.game-image img');
-            if (imgElement) {
-                imgElement.src = game.image;
-                imgElement.alt = game.imageAlt || game.title;
-                
-                // 添加生成标记
-                if (game.generatedImage) {
-                    imgElement.classList.add('ai-generated');
-                }
-            }
-        }
-    }
-
-    // 显示生成进度
-    showGenerationProgress(current, total) {
-        let progressBar = document.getElementById('ai-generation-progress');
-        if (!progressBar) {
-            progressBar = document.createElement('div');
-            progressBar.id = 'ai-generation-progress';
-            progressBar.className = 'ai-generation-progress';
-            progressBar.innerHTML = `
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
-                    </div>
-                    <div class="progress-text">正在生成图片... ${current}/${total}</div>
-                </div>
-            `;
-            document.body.appendChild(progressBar);
-        } else {
-            const progressFill = progressBar.querySelector('.progress-fill');
-            const progressText = progressBar.querySelector('.progress-text');
-            const percentage = (current / total) * 100;
-            
-            progressFill.style.width = `${percentage}%`;
-            progressText.textContent = `正在生成图片... ${current}/${total}`;
-        }
-    }
-
-    // 隐藏生成进度
-    hideGenerationProgress() {
-        const progressBar = document.getElementById('ai-generation-progress');
-        if (progressBar) {
-            progressBar.remove();
-        }
-    }
+// 显示用户菜单
+function showUserMenu() {
+    // 这里可以添加用户菜单功能
+    alert('用户菜单功能开发中...');
 }
 
-// 创建AI图像生成器实例
-const aiImageGenerator = new AIImageGenerator();
+// 显示通知
+function showNotifications() {
+    // 这里可以添加通知功能
+    alert('暂无新通知');
+}
 
-// 创建游戏卡片
-function createGameCard(game) {
-    const card = document.createElement('div');
-    card.className = 'game-card';
-    card.setAttribute('data-game-id', game.id);
-    
-    card.innerHTML = `
-        <div class="game-image">
-            <img src="${game.image}" alt="${game.title}" onerror="this.style.display='none'">
-        </div>
-        <div class="game-info">
-            <h3>${game.title}</h3>
-            <div class="game-meta">
-                <span class="category">${game.category}</span>
-                <span class="rating">⭐ ${game.rating}</span>
-            </div>
-            <p>${game.description}</p>
-        </div>
-    `;
-    
-    card.addEventListener('click', () => {
-        openGameDetail(game);
-    });
-    
-    return card;
+// 平滑滚动
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 }
 
 // 添加截图按钮样式
@@ -1440,3 +958,142 @@ document.addEventListener('DOMContentLoaded', function() {
 window.generateSingleGameImage = generateSingleGameImage;
 window.clearGeneratedImages = clearGeneratedImages;
 window.showGenerationStatus = showGenerationStatus; 
+
+// 显示模型详情
+function showModelDetails(modelType) {
+    const modelInfo = {
+        venice: {
+            name: 'Venice AI Chat',
+            description: 'Venice AI是一个先进的AI聊天平台，提供多语言支持和智能对话功能。',
+            features: [
+                '支持50+种语言',
+                '智能问答系统',
+                '创意写作助手',
+                '实时翻译功能',
+                '个性化对话体验',
+                '企业级安全保障'
+            ],
+            url: 'https://venice.ai/chat'
+        },
+        t3: {
+            name: 'T3 Chat',
+            description: 'T3 Chat专注于提供快速、精准的AI对话服务，适合各种专业场景。',
+            features: [
+                '超快速响应（0.5秒内）',
+                '99.5%准确率',
+                '100+专业场景支持',
+                '实时学习更新',
+                '多用户协作',
+                'API接口支持'
+            ],
+            url: 'https://t3.chat/chat'
+        }
+    };
+    
+    const model = modelInfo[modelType];
+    if (!model) return;
+    
+    // 创建模态框
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="model-detail">
+                <div class="model-detail-header">
+                    <div class="model-detail-icon">
+                        <i class="fas fa-${modelType === 'venice' ? 'robot' : 'brain'}"></i>
+                    </div>
+                    <h2>${model.name}</h2>
+                </div>
+                <p class="model-detail-description">${model.description}</p>
+                <div class="model-detail-features">
+                    <h3>主要功能</h3>
+                    <ul>
+                        ${model.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="model-detail-actions">
+                    <a href="${model.url}" target="_blank" class="chat-btn primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        访问官网
+                    </a>
+                    <button class="chat-btn secondary" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                        关闭
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // 关闭模态框
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.onclick = closeModal;
+    
+    modal.onclick = (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    };
+    
+    function closeModal() {
+        document.body.removeChild(modal);
+    }
+}
+
+// 初始化AI聊天模型统计动画
+function initAIChatStats() {
+    const statValues = document.querySelectorAll('.model-stats .stat-value');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateAIStat(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statValues.forEach(stat => observer.observe(stat));
+}
+
+// AI统计数字动画
+function animateAIStat(element) {
+    const finalValue = element.textContent;
+    let numericValue;
+    let suffix = '';
+    
+    if (finalValue.includes('%')) {
+        numericValue = parseFloat(finalValue.replace('%', ''));
+        suffix = '%';
+    } else if (finalValue.includes('+')) {
+        numericValue = parseInt(finalValue.replace('+', ''));
+        suffix = '+';
+    } else if (finalValue.includes('s')) {
+        numericValue = parseFloat(finalValue.replace('s', ''));
+        suffix = 's';
+    } else {
+        numericValue = parseInt(finalValue);
+    }
+    
+    let currentValue = 0;
+    const increment = numericValue / 30;
+    const timer = setInterval(() => {
+        currentValue += increment;
+        if (currentValue >= numericValue) {
+            currentValue = numericValue;
+            clearInterval(timer);
+        }
+        
+        if (suffix === '%') {
+            element.textContent = currentValue.toFixed(1) + suffix;
+        } else if (suffix === 's') {
+            element.textContent = currentValue.toFixed(1) + suffix;
+        } else {
+            element.textContent = Math.floor(currentValue) + suffix;
+        }
+    }, 50);
+} 

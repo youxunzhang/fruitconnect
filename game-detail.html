@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>游戏详情 - GameHub</title>
-    <link rel="stylesheet" href="detail-styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- AI游戏详情生成器 -->
     <script src="ai-game-details.js"></script>
@@ -16,10 +16,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <i class="fas fa-gamepad"></i>
-                    <span>GameHub</span>
-                </a>
+                <i class="fas fa-gamepad"></i>
+                <span>GameHub</span>
+                <div class="logo-glow"></div>
             </div>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">首页</a>
@@ -27,6 +26,15 @@
                 <a href="#" class="nav-link">最新游戏</a>
                 <a href="#" class="nav-link">分类</a>
                 <a href="#" class="nav-link">排行榜</a>
+                <a href="ailinks.html" class="nav-link">AI工具</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索游戏...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-user">
+                <button class="user-btn"><i class="fas fa-user"></i></button>
+                <button class="notification-btn"><i class="fas fa-bell"></i></button>
             </div>
         </div>
     </nav>
