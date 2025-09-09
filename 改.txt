@@ -1,0 +1,12 @@
+游戏网站  rubiks-cube.html 是错误的，游戏不能玩，帮我重建吧
+
+
+company-ranking.html页面 新增每个公司的LOGO 对应公司信息
+
+
+Browser.html 页面，新增每个网站的LOGO
+
+Categories
+New
+Popular
+三个菜单目录删除

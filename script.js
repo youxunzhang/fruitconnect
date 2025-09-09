@@ -132,6 +132,17 @@ const gamesData = [
         description: "数字合并游戏，挑战你的逻辑思维",
         screenshotUrl: null,
         isLocalGame: true
+    },
+    {
+        id: 14,
+        title: "🍎 连水果游戏",
+        category: "益智",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=300&h=200&fit=crop&crop=center",
+        iframe: "fruit-connect-simple.html",
+        description: "经典三消游戏，连接相同水果进行消除，挑战你的策略思维",
+        screenshotUrl: null,
+        isLocalGame: true
     }
 ];
 

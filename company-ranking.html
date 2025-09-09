@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Company Rankings - 游戏公司排行榜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus-within {
+            border-color: #667eea;
+        }
+
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0.5rem;
+            width: 200px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .ranking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .company-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #667eea;
+        }
+
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .company-rank {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-logo {
+            font-size: 3rem;
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .company-card:hover .company-logo {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-name-en {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .company-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .company-country {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .company-revenue {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .company-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .company-link:hover {
+            background: #764ba2;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            padding: 0.7rem 1.5rem;
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .category-tab:hover, .category-tab.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #333;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .ranking-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-tabs {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">game studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="Browser.html">Browser Game</a></li>
+                <li><a href="IFRAMGAME.html">IFRAMGAME</a></li>
+                <li><a href="company-ranking.html">Company Ranking</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Search companies..." id="searchInput">
+                <span>🔍</span>
+            </div>
+            <button class="mobile-menu">☰</button>
+        </div>
+    </nav>
+
+    <div class="content">
+        <section class="section">
+            <h2 class="section-title">🏆 全球游戏公司排行榜</h2>
+            <div class="category-tabs">
+                <button class="category-tab active" onclick="filterCompanies('all')">全部公司</button>
+                <button class="category-tab" onclick="filterCompanies('chinese')">中国公司</button>
+                <button class="category-tab" onclick="filterCompanies('international')">国际公司</button>
+            </div>
+            
+            <div class="ranking-grid" id="companiesGrid">
+                <!-- 中国公司 -->
+                <div class="company-card" data-category="chinese">
+                    <div class="company-rank">#1</div>
+                    <div class="company-logo">🎮</div>
+                    <div class="company-name">腾讯游戏</div>
+                    <div class="company-name-en">Tencent Games</div>
+                    <div class="company-description">全球最大的游戏公司之一，拥有《王者荣耀》、《和平精英》等热门游戏。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇨🇳 中国</span>
+                        <span class="company-revenue">年收入: $27.3B</span>
+                    </div>
+                    <a href="https://game.qq.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="chinese">
+                    <div class="company-rank">#2</div>
+                    <div class="company-logo">🦊</div>
+                    <div class="company-name">网易游戏</div>
+                    <div class="company-name-en">NetEase Games</div>
+                    <div class="company-description">中国领先的游戏开发商，代表作包括《梦幻西游》、《阴阳师》等。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇨🇳 中国</span>
+                        <span class="company-revenue">年收入: $9.7B</span>
+                    </div>
+                    <a href="https://game.163.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="chinese">
+                    <div class="company-rank">#3</div>
+                    <div class="company-logo">⭐</div>
+                    <div class="company-name">米哈游</div>
+                    <div class="company-name-en">miHoYo</div>
+                    <div class="company-description">以《原神》、《崩坏》系列闻名的二次元游戏开发商。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇨🇳 中国</span>
+                        <span class="company-revenue">年收入: $3.8B</span>
+                    </div>
+                    <a href="https://www.mihoyo.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <!-- 国际公司 -->
+                <div class="company-card" data-category="international">
+                    <div class="company-rank">#4</div>
+                    <div class="company-logo">🎮</div>
+                    <div class="company-name">索尼互动娱乐</div>
+                    <div class="company-name-en">Sony Interactive Entertainment</div>
+                    <div class="company-description">PlayStation平台的所有者，拥有《战神》、《最后生还者》等经典IP。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇯🇵 日本</span>
+                        <span class="company-revenue">年收入: $24.4B</span>
+                    </div>
+                    <a href="https://www.playstation.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="international">
+                    <div class="company-rank">#5</div>
+                    <div class="company-logo">🟢</div>
+                    <div class="company-name">微软游戏</div>
+                    <div class="company-name-en">Microsoft Gaming</div>
+                    <div class="company-description">Xbox平台所有者，收购了动视暴雪，拥有《我的世界》、《光环》等IP。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇺🇸 美国</span>
+                        <span class="company-revenue">年收入: $15.5B</span>
+                    </div>
+                    <a href="https://www.xbox.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="international">
+                    <div class="company-rank">#6</div>
+                    <div class="company-logo">🍄</div>
+                    <div class="company-name">任天堂</div>
+                    <div class="company-name-en">Nintendo</div>
+                    <div class="company-description">拥有《马里奥》、《塞尔达》、《宝可梦》等经典游戏系列。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇯🇵 日本</span>
+                        <span class="company-revenue">年收入: $12.1B</span>
+                    </div>
+                    <a href="https://www.nintendo.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="international">
+                    <div class="company-rank">#7</div>
+                    <div class="company-logo">⚔️</div>
+                    <div class="company-name">动视暴雪</div>
+                    <div class="company-name-en">Activision Blizzard</div>
+                    <div class="company-description">拥有《使命召唤》、《魔兽世界》、《守望先锋》等知名游戏。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇺🇸 美国</span>
+                        <span class="company-revenue">年收入: $7.5B</span>
+                    </div>
+                    <a href="https://www.activisionblizzard.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="international">
+                    <div class="company-rank">#8</div>
+                    <div class="company-logo">⚽</div>
+                    <div class="company-name">艺电</div>
+                    <div class="company-name-en">Electronic Arts (EA)</div>
+                    <div class="company-description">拥有《FIFA》、《战地》、《模拟人生》等经典游戏系列。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇺🇸 美国</span>
+                        <span class="company-revenue">年收入: $7.4B</span>
+                    </div>
+                    <a href="https://www.ea.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="chinese">
+                    <div class="company-rank">#9</div>
+                    <div class="company-logo">🌍</div>
+                    <div class="company-name">完美世界</div>
+                    <div class="company-name-en">Perfect World</div>
+                    <div class="company-description">中国知名游戏公司，拥有《完美世界》、《诛仙》等经典MMORPG。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇨🇳 中国</span>
+                        <span class="company-revenue">年收入: $1.2B</span>
+                    </div>
+                    <a href="http://www.wanmei.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+
+                <div class="company-card" data-category="international">
+                    <div class="company-rank">#10</div>
+                    <div class="company-logo">🗡️</div>
+                    <div class="company-name">育碧</div>
+                    <div class="company-name-en">Ubisoft</div>
+                    <div class="company-description">法国游戏开发商，拥有《刺客信条》、《彩虹六号》、《孤岛惊魂》等系列。</div>
+                    <div class="company-info">
+                        <span class="company-country">🇫🇷 法国</span>
+                        <span class="company-revenue">年收入: $2.3B</span>
+                    </div>
+                    <a href="https://www.ubisoft.com/" class="company-link" target="_blank">访问官网</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 game studio. All rights reserved.</p>
+            <p>Contact Us | About Us | Developer Collaboration</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterCompanies(category) {
+            const companies = document.querySelectorAll('.company-card');
+            const tabs = document.querySelectorAll('.category-tab');
+            
+            // 更新标签状态
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // 过滤公司
+            companies.forEach(company => {
+                if (category === 'all' || company.dataset.category === category) {
+                    company.style.display = 'block';
+                } else {
+                    company.style.display = 'none';
+                }
+            });
+        }
+
+        // 搜索功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                const companies = document.querySelectorAll('.company-card');
+                
+                companies.forEach(company => {
+                    const name = company.querySelector('.company-name').textContent.toLowerCase();
+                    const nameEn = company.querySelector('.company-name-en').textContent.toLowerCase();
+                    const description = company.querySelector('.company-description').textContent.toLowerCase();
+                    
+                    if (name.includes(searchTerm) || nameEn.includes(searchTerm) || description.includes(searchTerm)) {
+                        company.style.display = 'block';
+                    } else {
+                        company.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 移动端菜单
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html> 
