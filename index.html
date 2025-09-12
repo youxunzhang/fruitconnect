@@ -3,6 +3,15 @@
 <head>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437"
      crossorigin="anonymous"></script>
+<!-- Google tag (tongyong-gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXH17REJKN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CXH17REJKN');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="专业游戏工作室 - 专注于游戏开发、游戏制作、独立游戏设计。提供手机游戏、PC游戏、单机游戏、网络游戏开发服务。最新游戏资讯、热门游戏推荐、游戏攻略分享。">
@@ -278,6 +287,19 @@
             position: relative;
         }
 
+        .game-favicon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-emoji {
+            font-size: 2rem;
+        }
+
         .game-image::after {
             content: '▶';
             position: absolute;
@@ -362,6 +384,39 @@
             margin-top: 3rem;
         }
 
+        .page-summary {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .page-summary h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .page-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .page-summary li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .page-summary li::before {
+            content: "🎮";
+            position: absolute;
+            left: 0;
+        }
+
         .mobile-menu {
             display: none;
         }
@@ -429,7 +484,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+ 
   gtag('config', 'G-F9DEFKMPM5');
 </script>
 </head>
@@ -455,6 +510,10 @@
                 <input type="text" placeholder="Search games..." id="searchInput">
                 <span>🔍</span>
             </div>
+            <button class="favorite-btn" onclick="toggleFavorite()" id="favoriteBtn">
+                <span class="bookmark-icon">🔖</span>
+                <span class="favorite-text">收藏</span>
+            </button>
             <button class="mobile-menu">☰</button>
         </div>
     </nav>
@@ -798,6 +857,19 @@
 
     <footer class="footer">
         <div class="footer-content">
+            <div class="page-summary">
+                <h3>页面内容概要</h3>
+                <p>本页面是游戏工作室的官方网站首页，提供以下核心功能：</p>
+                <ul>
+                    <li><strong>游戏展示</strong>：展示精选的体育、射击、策略、益智、动作、竞速等各类游戏</li>
+                    <li><strong>游戏搜索</strong>：提供便捷的游戏搜索功能，支持按标题和分类筛选</li>
+                    <li><strong>社交媒体分享</strong>：支持分享到Facebook、Twitter、LinkedIn、WhatsApp等主流平台</li>
+                    <li><strong>响应式设计</strong>：适配桌面和移动设备，提供良好的用户体验</li>
+                    <li><strong>游戏推荐</strong>：基于评分的游戏推荐系统，帮助用户发现优质游戏</li>
+                </ul>
+                <p>网站采用现代化设计，集成Google Analytics和AdSense，为游戏爱好者提供一站式游戏体验平台。</p>
+            </div>
+            <hr style="margin: 2rem 0; border: 1px solid rgba(255,255,255,0.2);">
             <p>&copy; 2024 game studio. All rights reserved.</p>
             <p>Contact Us | About Us | Developer Collaboration</p>
         </div>
@@ -806,14 +878,14 @@
     <script>
         // Game data
         const games = [
-            { title: "Football Master", category: "Sports Games", rating: 4.5, icon: "⚽" },
-            { title: "Space Shooter", category: "Shooting Games", rating: 4.8, icon: "🚀" },
-            { title: "City Builder", category: "Strategy Games", rating: 4.7, icon: "🏙️" },
-            { title: "Magic Match", category: "Puzzle Games", rating: 4.6, icon: "✨" },
-            { title: "Ninja Jump", category: "Action Games", rating: 4.4, icon: "🥷" },
-            { title: "Gem Puzzle", category: "Puzzle Games", rating: 4.5, icon: "💎" },
-            { title: "Speed Motor", category: "Racing Games", rating: 4.7, icon: "🏍️" },
-            { title: "King Duel", category: "Strategy Games", rating: 4.8, icon: "👑" }
+            { title: "Football Master", category: "Sports Games", rating: 4.5, icon: "⚽", favicon: "https://www.fifa.com/favicon.ico" },
+            { title: "Space Shooter", category: "Shooting Games", rating: 4.8, icon: "🚀", favicon: "https://www.nasa.gov/favicon.ico" },
+            { title: "City Builder", category: "Strategy Games", rating: 4.7, icon: "🏙️", favicon: "https://www.simcity.com/favicon.ico" },
+            { title: "Magic Match", category: "Puzzle Games", rating: 4.6, icon: "✨", favicon: "https://www.candycrushsaga.com/favicon.ico" },
+            { title: "Ninja Jump", category: "Action Games", rating: 4.4, icon: "🥷", favicon: "https://www.ninjakiwi.com/favicon.ico" },
+            { title: "Gem Puzzle", category: "Puzzle Games", rating: 4.5, icon: "💎", favicon: "https://www.bejeweled.com/favicon.ico" },
+            { title: "Speed Motor", category: "Racing Games", rating: 4.7, icon: "🏍️", favicon: "https://www.needforspeed.com/favicon.ico" },
+            { title: "King Duel", category: "Strategy Games", rating: 4.8, icon: "👑", favicon: "https://www.clashroyale.com/favicon.ico" }
         ];
 
         const newGames = [
@@ -823,7 +895,10 @@
         function createGameCard(game) {
             return `
                 <div class="game-card" onclick="playGame('${game.title}')">
-                    <div class="game-image">${game.icon}</div>
+                    <div class="game-image">
+                        <img src="${game.favicon}" alt="${game.title}" class="game-favicon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="game-emoji" style="display: none;">${game.icon}</span>
+                    </div>
                     <div class="game-info">
                         <div class="game-title">${game.title}</div>
                         <div class="game-category">${game.category}</div>
@@ -879,8 +954,8 @@
 
         // Mobile menu
         document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                const navLinks = document.querySelector('.nav-links');
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
 
         // 社交媒体分享功能

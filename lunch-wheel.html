@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中午吃什么大转盘 - 随机午餐推荐</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437"
+         crossorigin="anonymous"></script>
+    <!-- Google tag (tongyong-gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXH17REJKN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CXH17REJKN');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .wheel-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+        }
+
+        .wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 8px solid #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            transition: transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+        }
+
+        .wheel-section {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            transform-origin: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .wheel-section:nth-child(1) { background: #ff6b6b; transform: rotate(0deg); }
+        .wheel-section:nth-child(2) { background: #4ecdc4; transform: rotate(45deg); }
+        .wheel-section:nth-child(3) { background: #45b7d1; transform: rotate(90deg); }
+        .wheel-section:nth-child(4) { background: #96ceb4; transform: rotate(135deg); }
+        .wheel-section:nth-child(5) { background: #feca57; transform: rotate(180deg); }
+        .wheel-section:nth-child(6) { background: #ff9ff3; transform: rotate(225deg); }
+        .wheel-section:nth-child(7) { background: #54a0ff; transform: rotate(270deg); }
+        .wheel-section:nth-child(8) { background: #5f27cd; transform: rotate(315deg); }
+
+        .wheel-pointer {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 30px solid #fff;
+            z-index: 10;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .spin-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .spin-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .spin-button:active {
+            transform: translateY(0);
+        }
+
+        .spin-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .result-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .result-food {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .result-reason {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .result-tips {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .lunch-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            max-width: 800px;
+        }
+
+        .option-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .option-emoji {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .option-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .option-type {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .spinning {
+            animation: spin 3s ease-out;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(var(--spin-rotation)); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        .page-summary {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .page-summary h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .page-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .page-summary li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .page-summary li::before {
+            content: "🍽️";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 600px) {
+            .wheel-container {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .result-container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .lunch-options {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🍽️ 中午吃什么大转盘</h1>
+        <p>让转盘帮你决定今天中午吃什么！</p>
+    </div>
+
+    <div class="wheel-container">
+        <div class="wheel" id="wheel">
+            <div class="wheel-section">🍜 面条</div>
+            <div class="wheel-section">🍱 便当</div>
+            <div class="wheel-section">🍕 披萨</div>
+            <div class="wheel-section">🍔 汉堡</div>
+            <div class="wheel-section">🥗 沙拉</div>
+            <div class="wheel-section">🍲 火锅</div>
+            <div class="wheel-section">🍛 盖饭</div>
+            <div class="wheel-section">🥘 汤品</div>
+        </div>
+        <div class="wheel-pointer"></div>
+    </div>
+
+    <button class="spin-button" id="spinButton" onclick="spinWheel()">
+        🎯 开始转盘
+    </button>
+
+    <div class="controls">
+        <button class="control-btn" onclick="addCustomOption()">➕ 添加选项</button>
+        <button class="control-btn" onclick="resetOptions()">🔄 重置选项</button>
+        <button class="control-btn" onclick="showAllOptions()">📋 查看所有</button>
+    </div>
+
+    <div class="result-container" id="resultContainer" style="display: none;">
+        <div class="result-title">🎉 推荐结果</div>
+        <div class="result-food" id="resultFood"></div>
+        <div class="result-reason" id="resultReason"></div>
+        <div class="result-tips" id="resultTips"></div>
+    </div>
+
+    <div class="lunch-options" id="lunchOptions" style="display: none;">
+        <div class="option-card">
+            <div class="option-emoji">🍜</div>
+            <div class="option-name">面条</div>
+            <div class="option-type">中式</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🍱</div>
+            <div class="option-name">便当</div>
+            <div class="option-type">日式</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🍕</div>
+            <div class="option-name">披萨</div>
+            <div class="option-type">意式</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🍔</div>
+            <div class="option-name">汉堡</div>
+            <div class="option-type">美式</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🥗</div>
+            <div class="option-name">沙拉</div>
+            <div class="option-type">健康</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🍲</div>
+            <div class="option-name">火锅</div>
+            <div class="option-type">中式</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🍛</div>
+            <div class="option-name">盖饭</div>
+            <div class="option-type">中式</div>
+        </div>
+        <div class="option-card">
+            <div class="option-emoji">🥘</div>
+            <div class="option-name">汤品</div>
+            <div class="option-type">中式</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="page-summary">
+                <h3>页面内容概要</h3>
+                <p>本页面是一个有趣的午餐推荐工具，提供以下核心功能：</p>
+                <ul>
+                    <li><strong>随机转盘</strong>：8个精美的转盘区域，包含面条、便当、披萨、汉堡、沙拉、火锅、盖饭、汤品等选项</li>
+                    <li><strong>推荐理由</strong>：每个选项都配有详细的推荐理由和营养建议</li>
+                    <li><strong>转盘动画</strong>：流畅的旋转动画效果，增加游戏趣味性</li>
+                    <li><strong>自定义选项</strong>：支持添加自定义午餐选项（功能开发中）</li>
+                    <li><strong>选项管理</strong>：提供重置选项和查看所有选项的功能</li>
+                    <li><strong>响应式设计</strong>：适配桌面和移动设备，提供良好的用户体验</li>
+                </ul>
+                <p>适用于解决选择困难症，为午餐选择提供有趣的决策工具，让用餐变得更加有趣。</p>
+            </div>
+            <hr style="margin: 2rem 0; border: 1px solid rgba(255,255,255,0.2);">
+            <p>&copy; 2024 game studio. All rights reserved.</p>
+            <p>Contact Us | About Us | Developer Collaboration</p>
+        </div>
+    </footer>
+
+    <script>
+        // 午餐选项数据
+        const lunchData = {
+            '🍜 面条': {
+                name: '面条',
+                reason: '面条是经典的中式午餐选择，营养丰富，制作简单。可以选择拉面、刀削面、意面等不同种类，搭配各种蔬菜和肉类，既美味又饱腹。',
+                tips: '💡 建议搭配青菜和鸡蛋，营养更均衡'
+            },
+            '🍱 便当': {
+                name: '便当',
+                reason: '日式便当营养搭配合理，菜品种类丰富，既有主食又有配菜。制作精美，携带方便，是上班族的理想选择。',
+                tips: '💡 可以尝试自制便当，健康又经济'
+            },
+            '🍕 披萨': {
+                name: '披萨',
+                reason: '披萨是受欢迎的西式美食，口味多样，可以满足不同人的喜好。芝士丰富，口感丰富，适合与朋友一起分享。',
+                tips: '💡 选择薄底披萨，减少热量摄入'
+            },
+            '🍔 汉堡': {
+                name: '汉堡',
+                reason: '汉堡制作快速，携带方便，是忙碌时的好选择。可以搭配薯条和饮料，形成完整的快餐组合。',
+                tips: '💡 选择全麦面包和蔬菜较多的汉堡'
+            },
+            '🥗 沙拉': {
+                name: '沙拉',
+                reason: '沙拉是健康饮食的代表，富含维生素和纤维，热量低，适合想要保持身材的人。可以搭配各种蔬菜、水果和蛋白质。',
+                tips: '💡 选择橄榄油和柠檬汁作为调料'
+            },
+            '🍲 火锅': {
+                name: '火锅',
+                reason: '火锅是聚餐的好选择，可以边煮边吃，气氛热闹。食材丰富，可以根据个人喜好选择不同的汤底和配菜。',
+                tips: '💡 适合多人聚餐，注意食材新鲜度'
+            },
+            '🍛 盖饭': {
+                name: '盖饭',
+                reason: '盖饭是中式快餐的经典，米饭搭配各种菜肴，营养均衡，价格实惠。制作简单，口味丰富，深受大众喜爱。',
+                tips: '💡 选择蔬菜较多的盖饭，营养更全面'
+            },
+            '🥘 汤品': {
+                name: '汤品',
+                reason: '汤品营养丰富，易于消化，适合各种人群。可以搭配米饭或面包，形成完整的午餐。热汤还能温暖肠胃。',
+                tips: '💡 选择清淡的汤品，避免过于油腻'
+            }
+        };
+
+        let isSpinning = false;
+        let currentRotation = 0;
+
+        function spinWheel() {
+            if (isSpinning) return;
+            
+            isSpinning = true;
+            const spinButton = document.getElementById('spinButton');
+            const wheel = document.getElementById('wheel');
+            const resultContainer = document.getElementById('resultContainer');
+            
+            // 禁用按钮
+            spinButton.disabled = true;
+            spinButton.textContent = '🎯 转盘中...';
+            
+            // 隐藏之前的结果
+            resultContainer.style.display = 'none';
+            
+            // 计算旋转角度（至少转3圈 + 随机角度）
+            const minSpins = 3;
+            const randomAngle = Math.random() * 360;
+            const totalRotation = minSpins * 360 + randomAngle;
+            
+            // 更新当前旋转角度
+            currentRotation += totalRotation;
+            
+            // 设置CSS变量并应用旋转
+            wheel.style.setProperty('--spin-rotation', currentRotation + 'deg');
+            wheel.classList.add('spinning');
+            
+            // 3秒后显示结果
+            setTimeout(() => {
+                showResult();
+                isSpinning = false;
+                spinButton.disabled = false;
+                spinButton.textContent = '🎯 再转一次';
+                wheel.classList.remove('spinning');
+            }, 3000);
+        }
+
+        function showResult() {
+            // 计算指针指向的选项
+            const normalizedRotation = currentRotation % 360;
+            const sectionAngle = 360 / 8; // 8个选项
+            const sectionIndex = Math.floor((360 - normalizedRotation) / sectionAngle) % 8;
+            
+            const sections = document.querySelectorAll('.wheel-section');
+            const selectedOption = sections[sectionIndex].textContent.trim();
+            
+            // 显示结果
+            const resultContainer = document.getElementById('resultContainer');
+            const resultFood = document.getElementById('resultFood');
+            const resultReason = document.getElementById('resultReason');
+            const resultTips = document.getElementById('resultTips');
+            
+            const optionData = lunchData[selectedOption];
+            
+            resultFood.textContent = optionData.name;
+            resultReason.textContent = optionData.reason;
+            resultTips.textContent = optionData.tips;
+            
+            resultContainer.style.display = 'block';
+            resultContainer.classList.add('fade-in');
+        }
+
+        function addCustomOption() {
+            const newOption = prompt('请输入新的午餐选项（例如：🍜 拉面）:');
+            if (newOption && newOption.trim()) {
+                alert('自定义选项功能开发中，敬请期待！');
+            }
+        }
+
+        function resetOptions() {
+            if (confirm('确定要重置所有选项吗？')) {
+                location.reload();
+            }
+        }
+
+        function showAllOptions() {
+            const lunchOptions = document.getElementById('lunchOptions');
+            if (lunchOptions.style.display === 'none') {
+                lunchOptions.style.display = 'grid';
+                lunchOptions.classList.add('fade-in');
+            } else {
+                lunchOptions.style.display = 'none';
+            }
+        }
+
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('中午吃什么大转盘已加载完成！');
+        });
+    </script>
+</body>
+</html>
