@@ -208,7 +208,6 @@ main {
     .hero { padding: 100px 0 80px; }
     .hero-title { font-size: 2.4rem; }
     .hero-subtitle { font-size: 1.05rem; }
-    .embed-wrapper iframe { min-height: 420px; }
 }
 
 /* 游戏展示区域 */
@@ -251,21 +250,35 @@ main {
 
 .embed-wrapper {
     position: relative;
-    max-width: 960px;
+    width: 100%;
+    max-width: 820px;
     margin: 0 auto;
     background: radial-gradient(circle at top left, rgba(255, 209, 102, 0.25), transparent 70%);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: 0 28px 60px rgba(255, 107, 107, 0.18);
     border: 6px solid rgba(255, 255, 255, 0.85);
+    aspect-ratio: 4 / 3;
 }
 
 .embed-wrapper iframe {
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 600px;
     border: 0;
+}
+
+@supports not (aspect-ratio: 4 / 3) {
+    .embed-wrapper {
+        height: 0;
+        padding-top: 75%;
+    }
+
+    .embed-wrapper iframe {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
 }
 
 .embed-footnote {
