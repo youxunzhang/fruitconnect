@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest News - Wood Block Jam & Game Center</title>
-    <meta name="description" content="Latest news and updates about Wood Block Jam and Game Center.">
+    <title>最好玩的免费在线小游戏推荐 | FruitConnect 游戏中心</title>
+    <meta name="description" content="收录最热门的在线小游戏，包括消除、益智、休闲小游戏。点击即可畅玩，支持手机和电脑，无需下载！">
     <link rel="stylesheet" href="styles.css?v=20250918">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +50,6 @@
             }));
         });
     </script>
-    <script defer src="script.js?v=20250918"></script>
     <style>
         /* 适配移动端 */
         @media (max-width: 480px) {
@@ -67,8 +66,11 @@
                 <span>Game Center</span>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html#games" class="nav-link">Games</a>
-                <a href="#" class="nav-link active">Latest News</a>
+                <a href="index.html#games" class="nav-link">全部游戏</a>
+                <a href="fruit-connect-3.html" class="nav-link">Fruit Connect 3</a>
+                <a href="#" class="nav-link active">Top Games</a>
+                <a href="game-companies.html" class="nav-link">游戏公司榜</a>
+                <a href="ai-tools.html" class="nav-link">AI 工具</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -81,8 +83,8 @@
     <!-- Page Header -->
     <header class="page-hero">
         <div class="container">
-            <h1>Latest News</h1>
-            <p>Stay updated with DeskGame.xyz latest game updates, events, and tips</p>
+            <h1>Top Games 推荐榜</h1>
+            <p>FruitConnect 游戏中心甄选必玩免费小游戏，手机电脑随时开局</p>
         </div>
     </header>
 
@@ -91,45 +93,44 @@
         <section class="news-section">
             <div class="container">
                 <div class="news-filters">
-                    <button class="news-filter-btn active" data-category="all">All</button>
-                    <button class="news-filter-btn" data-category="updates">Game Updates</button>
-                    <button class="news-filter-btn" data-category="events">Events</button>
-                    <button class="news-filter-btn" data-category="tips">Tips & Tricks</button>
-                    <button class="news-filter-btn" data-category="community">Community</button>
-                    <button class="news-filter-btn" data-category="other">Other</button>
+                    <button class="news-filter-btn active" data-category="all">全部</button>
+                    <button class="news-filter-btn" data-category="puzzle">消除解谜</button>
+                    <button class="news-filter-btn" data-category="arcade">街机动作</button>
+                    <button class="news-filter-btn" data-category="casual">休闲益智</button>
+                    <button class="news-filter-btn" data-category="strategy">策略挑战</button>
                 </div>
 
-                <h2 class="section-heading">Featured Content</h2>
+                <h2 class="section-heading">精选推荐</h2>
                 <div class="news-grid">
-                    <article class="news-card" data-category="tips">
-                        <div class="news-meta"><i class="far fa-calendar"></i><span>September 16, 2025</span><span class="tag">Tips & Tricks</span></div>
-                        <h3 class="news-title">Wood Block Jam - The Real Talk: Why This Puzzle Game Will Either Make You a Genius or Drive You Insane</h3>
-                        <p class="news-desc">The brutal truth about this addictive puzzle game that will either make you a genius or drive you insane. A complete guide from a veteran player.</p>
+                    <article class="news-card" data-category="puzzle">
+                        <div class="news-meta"><i class="far fa-star"></i><span>编辑推荐</span><span class="tag">Puzzle</span></div>
+                        <h3 class="news-title">Fruit Connect 3</h3>
+                        <p class="news-desc">经典水果连连看系列最新续作，三次转弯连接，轻松挑战高分。</p>
                         <div class="news-actions">
-                            <a href="#" class="btn-link">Read More →</a>
-                            <a href="index.html#featured-embed" class="btn-link">Play Now</a>
+                            <a href="fruit-connect-3.html" class="btn-link">查看详情 →</a>
+                            <a href="fruit-connect-3.html#featured-embed" class="btn-link">立即开玩</a>
                         </div>
                     </article>
                 </div>
 
-                <h2 class="section-heading">Latest Content</h2>
+                <h2 class="section-heading">热门游戏榜单</h2>
                 <div class="news-grid">
-                    <article class="news-card" data-category="updates">
-                        <div class="news-meta"><i class="far fa-calendar"></i><span>September 15, 2025</span><span class="tag">Game Updates</span></div>
-                        <h3 class="news-title">Welcome to DeskGame.xyz - Your New Gaming Destination</h3>
-                        <p class="news-desc">We're excited to announce the launch of our new gaming platform featuring Wood Block Jam and more exciting puzzle games.</p>
+                    <article class="news-card" data-category="casual">
+                        <div class="news-meta"><i class="far fa-thumbs-up"></i><span>玩家口碑</span><span class="tag">Casual</span></div>
+                        <h3 class="news-title">Wood Block Jam</h3>
+                        <p class="news-desc">方块拖拽消除休闲神作，适合碎片时间放松，简单易上手。</p>
                         <div class="news-actions">
-                            <a href="#" class="btn-link">Read More →</a>
-                            <a href="index.html#games" class="btn-link">Browse Games</a>
+                            <a href="index.html#games" class="btn-link">更多玩法 →</a>
+                            <a href="index.html#featured-embed" class="btn-link">立即开玩</a>
                         </div>
                     </article>
-                    <article class="news-card" data-category="events">
-                        <div class="news-meta"><i class="far fa-calendar"></i><span>September 14, 2025</span><span class="tag">Events</span></div>
-                        <h3 class="news-title">Daily Challenge: Master the Wood Block Jam</h3>
-                        <p class="news-desc">Join our daily challenges and compete with players worldwide. New levels added every week!</p>
+                    <article class="news-card" data-category="arcade">
+                        <div class="news-meta"><i class="far fa-fire"></i><span>高热度</span><span class="tag">Arcade</span></div>
+                        <h3 class="news-title">Pong Game</h3>
+                        <p class="news-desc">怀旧街机对战玩法，支持鼠标与触屏操作，越玩越上瘾。</p>
                         <div class="news-actions">
-                            <a href="#" class="btn-link">Read More →</a>
-                            <a href="index.html#featured-embed" class="btn-link">Play Challenge</a>
+                            <a href="pong-game.html" class="btn-link">进入页面 →</a>
+                            <a href="pong-game.html" class="btn-link">立即开玩</a>
                         </div>
                     </article>
                 </div>
@@ -148,9 +149,9 @@
                 <div class="footer-section">
                     <h4>Browse</h4>
                     <ul>
-                        <li><a href="index.html#games">All Games</a></li>
-                        <li><a href="news.html">Latest News</a></li>
-                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#games">全部游戏</a></li>
+                        <li><a href="top-games.html">Top Games</a></li>
+                        <li><a href="index.html#about">关于我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -163,6 +164,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 
