@@ -197,11 +197,38 @@ const gamesData = [
         image: "https://via.placeholder.com/300x200/00ff88/000000?text=Pong+Game",
         url: "pong-game.html",
         fallback: false
+    },
+    {
+        id: 23,
+        title: "超级玛丽",
+        description: "重温经典平台跳跃冒险，帮助马里奥营救公主",
+        category: "arcade",
+        image: "https://via.placeholder.com/300x200/2563eb/ffffff?text=Super+Mario",
+        url: "https://jcw87.github.io/c2-smb1/",
+        fallback: false
+    },
+    {
+        id: 24,
+        title: "3D 魔方",
+        description: "用 3D 魔方练习空间思维，尝试快速复原",
+        category: "puzzle",
+        image: "https://via.placeholder.com/300x200/0ea5e9/ffffff?text=3D+Cube",
+        url: "https://zoo-js.github.io/3dcube/?red=cat&white=dog&blue=pig&green=sheep&orange=koala&yellow=ant&bg=*ffd8bf",
+        fallback: false
+    },
+    {
+        id: 25,
+        title: "自由车手",
+        description: "在炫酷赛道上骑行，挑战物理骑行极限",
+        category: "arcade",
+        image: "https://via.placeholder.com/300x200/f97316/ffffff?text=Bike+Rider",
+        url: "https://www.freeriderhd.com/game/1004698-carbon?embedded=true",
+        fallback: false
     }
 ];
 
 // 生成更多游戏数据以达到100个游戏
-for (let i = 23; i <= 100; i++) {
+for (let i = gamesData.length + 1; i <= 100; i++) {
     const categories = ['puzzle', 'strategy', 'arcade', 'adventure'];
     const category = categories[Math.floor(Math.random() * categories.length)];
     
@@ -390,6 +417,10 @@ function initializeNavigation() {
 
 // 游戏功能
 function initializeGames() {
+    if (!gamesGrid) {
+        return;
+    }
+
     if (!loadMoreBtn) {
         displayedGames = gamesData.length;
     }
@@ -400,6 +431,9 @@ function initializeGames() {
 }
 
 function renderGames() {
+    if (!gamesGrid) {
+        return;
+    }
     let filteredGames = gamesData;
     
     // 按类别筛选
@@ -579,6 +613,10 @@ function initializeLazyLoading() {
 
 // 模态框功能
 function initializeModal() {
+    if (!gameModal || !modalClose || !gameFrame || !modalTitle) {
+        return;
+    }
+
     modalClose.addEventListener('click', closeModal);
     
     gameModal.addEventListener('click', function(e) {
@@ -586,7 +624,7 @@ function initializeModal() {
             closeModal();
         }
     });
-    
+
     // ESC键关闭模态框
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && gameModal.classList.contains('active')) {
@@ -596,6 +634,11 @@ function initializeModal() {
 }
 
 function openGame(url, title) {
+    if (!gameModal || !gameFrame || !modalTitle) {
+        window.open(url, '_blank');
+        return;
+    }
+
     modalTitle.textContent = title;
     gameFrame.src = url;
     gameModal.classList.add('active');
@@ -603,6 +646,10 @@ function openGame(url, title) {
 }
 
 function closeModal() {
+    if (!gameModal || !gameFrame) {
+        return;
+    }
+
     gameModal.classList.remove('active');
     gameFrame.src = '';
     document.body.style.overflow = 'auto';
