@@ -2,39 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
- 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS8BB419J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS8BB419J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-MZS8BB419J');
-</script>
+      gtag('config', 'G-MZS8BB419J');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Connect 3 - Juicy Tile-Matching Fun | Game Center</title>
-    <meta name="description" content="Play Fruit Connect 3 online! Match fruity tiles, clear the board, and race the timer in this vibrant line-connection puzzle adventure.">
+    <title>Fruit Connect 3 - Play Instantly | Game Center</title>
+    <meta name="description" content="Launch Fruit Connect 3 instantly. Match fruit tiles, beat the timer, and enjoy arcade puzzle action without leaving the page.">
     <link rel="stylesheet" href="styles.css?v=20250918">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav class="navbar landing-navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <i class="fas fa-gamepad"></i>
-                <span>Game Center</span>
-            </div>
+            <a class="nav-brand" href="/">
+                <span class="brand-icon">🍓</span>
+                <div class="brand-labels">
+                    <span class="brand-title">FruitConnect</span>
+                    <span class="brand-subtitle">Game Hub</span>
+                </div>
+            </a>
+            <form class="nav-search" role="search" aria-label="Search games">
+                <input type="search" placeholder="Search games &amp; flash" aria-label="Search" />
+                <button type="submit" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
             <div class="nav-menu" id="nav-menu">
-                <a href="iframegame.html" class="nav-link">Iframe Games</a>
-                <a href="games.html#catalog" class="nav-link">Game Catalog</a>
-                <a href="news.html" class="nav-link">Latest News</a>
+                <a href="games.html#catalog" class="nav-link">New Games</a>
+                <a href="iframegame.html" class="nav-link">Iframe</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="pong-game.html" class="nav-link">Pong</a>
                 <a href="https://hotspotgame.online" class="nav-link" target="_blank" rel="noopener">热点游戏</a>
-                <a href="#about" class="nav-link">About</a>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <div class="nav-toggle" id="nav-toggle" aria-label="Menu toggle" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -42,229 +49,193 @@
         </div>
     </nav>
 
-    <!-- Fruit Connect 3 着陆页（英雄区域） -->
-    <section class="hero hero-fruit-connect">
-        <div class="container hero-inner">
-            <div class="hero-text">
-                <h1 class="hero-title">Fruit Connect 3</h1>
-                <p class="hero-subtitle">Slice through juicy levels by linking matching fruit tiles with a path that twists up to three turns.</p>
-                <a class="btn-hero" href="#featured-embed">
-                    <i class="fas fa-play"></i>
-                    Play Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 主要内容 -->
-    <main>
-        <!-- 直接嵌入的 Fruit Connect 3 游戏 -->
-        <section id="featured-embed" class="embed-section">
+    <main class="landing-main">
+        <section class="hub-intro">
             <div class="container">
-                <div class="embed-pretitle">Puzzle · Matching · Arcade</div>
-                <h2 class="embed-title">Play Fruit Connect 3 Online</h2>
-                <p class="embed-description">Beat the clock as you clear the orchard! Tap matching tiles, create open paths, and chain combos for a perfect harvest.</p>
-                <div class="embed-wrapper">
-                    <iframe src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/fruit-connect-3" width="800" height="600" scrolling="no" frameborder="0" allowfullscreen title="Play Fruit Connect 3"></iframe>
-                </div>
-                <p class="embed-footnote"><i class="fas fa-info-circle"></i> The game loads directly from GameDistribution. Please allow a few seconds for the orchard to appear.</p>
+                <div class="intro-chip">Featured Puzzle</div>
+                <h1 class="intro-title">Fruit Connect 3 launches instantly.</h1>
+                <p class="intro-subtitle">Match vibrant fruit tiles and clear the board right from the landing page—no extra clicks required.</p>
             </div>
         </section>
 
-        <!-- How to Play -->
-        <section id="howto" class="howto-section">
-            <div class="container">
-                <div class="howto-header">
-                    <h2>How to Play Fruit Connect 3</h2>
-                    <p class="howto-subtitle">Connect identical fruits with swift, strategic moves</p>
-                </div>
-                <div class="howto-grid">
-                    <div class="howto-card">
-                        <h3 class="howto-title"><i class="fas fa-seedling"></i> Basic Rules</h3>
-                        <ol class="howto-list numbered">
-                            <li>Tap two identical fruit tiles to link them with a path.</li>
-                            <li>Paths can turn up to three times but cannot cross other tiles.</li>
-                            <li>Clear all tiles before the timer runs out to advance.</li>
-                            <li>Use hints and shuffles wisely to rescue tricky boards.</li>
-                        </ol>
+        <div class="hub-grid container">
+            <section class="game-showcase">
+                <header class="game-showcase-header">
+                    <div class="breadcrumb">Arcade &rsaquo; Matching &rsaquo; Fruit Connect 3</div>
+                    <div class="tag-list">
+                        <span class="tag">Puzzle</span>
+                        <span class="tag">Match-3</span>
+                        <span class="tag">Timer Rush</span>
                     </div>
-                    <div class="howto-card">
-                        <h3 class="howto-title"><i class="fas fa-gamepad"></i> Controls & Tips</h3>
-                        <ul class="howto-list bulleted">
-                            <li><span class="label">Click / Tap:</span> Select matching tiles and confirm the connection.</li>
-                            <li><span class="label">Mouse Drag:</span> Highlight the path if you prefer guided motions on desktop.</li>
-                            <li><span class="label">Combo Bonus:</span> Chain matches quickly to fill the bonus meter.</li>
-                            <li><span class="label">Power Fruit:</span> Unlock special fruit tiles that clear whole rows.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </header>
 
-        <!-- Game Features -->
-        <section id="game-features" class="features-section features-fruit-connect">
-            <div class="container">
-                <div class="features-header">
-                    <h2>Game Features</h2>
-                    <p class="features-subtitle">Discover what makes Fruit Connect 3 a refreshing puzzle snack</p>
-                </div>
-                <div class="feature-cards">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                        <h3 class="feature-title">Hundreds of Juicy Boards</h3>
-                        <p class="feature-desc">Travel through farm stands, orchards, and tropical beaches with progressively challenging layouts.</p>
+                <div class="game-stage">
+                    <div class="stage-toolbar">
+                        <div class="stage-title">
+                            <span class="stage-pill live">Now Playing</span>
+                            <h2>Fruit Connect 3</h2>
+                        </div>
+                        <div class="stage-actions">
+                            <button class="stage-btn" type="button">
+                                <i class="fas fa-expand"></i>
+                                Fullscreen
+                            </button>
+                            <button class="stage-btn secondary" type="button">
+                                <i class="fas fa-share-nodes"></i>
+                                Share
+                            </button>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-stopwatch"></i></div>
-                        <h3 class="feature-title">Race the Timer</h3>
-                        <p class="feature-desc">Keep an eye on the countdown and unleash combos to add precious seconds.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-gift"></i></div>
-                        <h3 class="feature-title">Daily Rewards</h3>
-                        <p class="feature-desc">Spin the prize wheel and collect boosters that help you conquer the tastiest puzzles.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Play on Any Device -->
-        <section id="devices" class="devices-section">
-            <div class="container">
-                <div class="devices-header">
-                    <h2>Play on Any Device</h2>
-                    <p class="devices-subtitle">Fruit Connect 3 delivers crisp fruit-slicing action everywhere you play</p>
-                </div>
-                <div class="devices-grid">
-                    <div class="device-card">
-                        <h3 class="device-title">PC & Chromebook</h3>
-                        <p class="device-desc">Enjoy full-screen play with quick clicks and trackpad swipes.</p>
+                    <div class="stage-player" id="featured-embed">
+                        <iframe src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/fruit-connect-3" width="900" height="675" scrolling="no" frameborder="0" allowfullscreen title="Play Fruit Connect 3"></iframe>
                     </div>
-                    <div class="device-card">
-                        <h3 class="device-title">Mobile & Tablet</h3>
-                        <p class="device-desc">Tap-friendly interface with responsive fruit tiles and quick hints.</p>
-                    </div>
-                    <div class="device-card">
-                        <h3 class="device-title">Cross-Platform</h3>
-                        <p class="device-desc">Your progress, boosts, and settings travel with you across browsers.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- About the Game -->
-        <section id="about-game" class="about-game-section">
-            <div class="container">
-                <div class="about-game-header">
-                    <h2>About the Game</h2>
-                    <p class="about-game-subtitle">Learn more about Fruit Connect 3 and the team behind the orchard</p>
-                </div>
-                <div class="about-game-content">
-                    <div class="about-game-text">
-                        <p>Fruit Connect 3 is a vibrant line-connection puzzle game that keeps your brain buzzing with colorful produce. Each board is filled with juicy tiles, and your mission is to clear the orchard by pairing identical fruits with a clear path between them.</p>
-                        <p>As levels advance, the grids become more intricate with frozen crates, locked vines, and special fruit tiles that trigger sweeping effects. Combine quick thinking with sharp observation to maintain your combo meter and outpace the countdown.</p>
-                        <p>Whether you are chasing high scores, unlocking new backgrounds, or relaxing with a fruity soundtrack, Fruit Connect 3 is the perfect mix of calm focus and energetic fun.</p>
+                    <div class="stage-meta">
+                        <div class="meta-primary">
+                            <div class="meta-rating">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span class="rating-score">96%</span>
+                                <span class="rating-count">(2.1K votes)</span>
+                            </div>
+                            <div class="meta-status">
+                                <i class="fas fa-bolt"></i>
+                                Fast load
+                            </div>
+                        </div>
+                        <p class="meta-description">Link matching fruits with up to three turns, rack up combo streaks, and beat the countdown clock. Each board is a fresh orchard of juicy challenges waiting for lightning-fast reflexes.</p>
                     </div>
-                    <ul class="about-game-meta">
-                        <li><span class="meta-label">Developer:</span> PlayTouch</li>
-                        <li><span class="meta-label">Genre:</span> Puzzle · Matching · Arcade</li>
-                        <li><span class="meta-label">Platform:</span> Web Browser (Desktop & Mobile)</li>
-                        <li><span class="meta-label">Price:</span> Free to Play</li>
+                </div>
+
+                <section class="game-details">
+                    <div class="details-grid">
+                        <div class="details-card">
+                            <h3><i class="fas fa-gamepad"></i> How it plays</h3>
+                            <ul>
+                                <li>Tap two identical fruits to connect them with a clear path.</li>
+                                <li>Use a maximum of three turns per connection.</li>
+                                <li>Trigger streak bonuses to freeze or extend the timer.</li>
+                                <li>Deploy hints and shuffles when the board jams.</li>
+                            </ul>
+                        </div>
+                        <div class="details-card">
+                            <h3><i class="fas fa-gift"></i> Power-ups</h3>
+                            <ul>
+                                <li><strong>Shuffle Basket:</strong> Rearrange tiles for new matches.</li>
+                                <li><strong>Combo Gauge:</strong> Fill it to clear random rows.</li>
+                                <li><strong>Timer Seeds:</strong> Add bonus seconds to tough rounds.</li>
+                                <li><strong>Fruit Bombs:</strong> Explode pesky blockers instantly.</li>
+                            </ul>
+                        </div>
+                        <div class="details-card">
+                            <h3><i class="fas fa-mobile-screen"></i> Best on every device</h3>
+                            <ul>
+                                <li>Responsive full-screen play on tablets and desktops.</li>
+                                <li>Quick tap controls on phones with haptic feedback.</li>
+                                <li>Seamless resume across Chrome, Safari, and Edge.</li>
+                                <li>Lightweight streaming keeps Chromebooks fast.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="hub-sidebar">
+                <section class="sidebar-card">
+                    <h3 class="sidebar-title">Discover more</h3>
+                    <ul class="discovery-list">
+                        <li><a href="games.html#catalog"><span>🎯</span> Matching catalog</a></li>
+                        <li><a href="iframegame.html"><span>🕹️</span> Instant iframe games</a></li>
+                        <li><a href="news.html"><span>📰</span> Daily arcade news</a></li>
+                        <li><a href="pong-game.html"><span>🏓</span> Retro pong challenge</a></li>
+                        <li><a href="https://hotspotgame.online" target="_blank" rel="noopener"><span>🔥</span> Trending 热点游戏</a></li>
                     </ul>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- IFrame 游戏库引导 -->
-        <section class="games-section games-preview">
-            <div class="container">
-                <div class="page-header">
-                    <h2>Discover Our IFrame Game Library</h2>
-                    <p>Explore more than 100 puzzle, strategy, arcade, and adventure titles in the dedicated iframe collection.</p>
-                    <a class="btn-hero" href="iframegame.html">
-                        <i class="fas fa-th-large"></i>
-                        Browse IFrame Game Hub
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>📖 About Us</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Game Center is a free online platform focused on delivering a high-quality gaming experience. We curate 100+ titles across Puzzle, Strategy, Arcade, and Adventure categories.</p>
-                        <p>Every game is handpicked to ensure quality and user experience. Enjoy seamless play on PC, tablet, and mobile devices anytime, anywhere.</p>
+                <section class="sidebar-card">
+                    <div class="sidebar-title-row">
+                        <h3 class="sidebar-title">Speed picks</h3>
+                        <a class="sidebar-link" href="games.html#catalog">View all</a>
                     </div>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h4>Responsive Design</h4>
-                            <p>Optimized for all devices</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-bolt"></i>
-                            <h4>Fast Loading</h4>
-                            <p>Smooth, optimized gameplay</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Secure & Reliable</h4>
-                            <p>No ads, no malware</p>
-                        </div>
+                    <div class="speed-picks">
+                        <article class="pick-card">
+                            <div class="pick-thumb puzzle"></div>
+                            <div class="pick-info">
+                                <h4>Memoji Match</h4>
+                                <p>Flip emoji tiles for rapid combos.</p>
+                            </div>
+                            <a class="pick-action" href="iframegame.html" aria-label="Play Memoji Match">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </article>
+                        <article class="pick-card">
+                            <div class="pick-thumb adventure"></div>
+                            <div class="pick-info">
+                                <h4>Cityquest Run</h4>
+                                <p>Dodge traffic and chase golden tickets.</p>
+                            </div>
+                            <a class="pick-action" href="games.html#catalog" aria-label="Play Cityquest Run">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </article>
+                        <article class="pick-card">
+                            <div class="pick-thumb arcade"></div>
+                            <div class="pick-info">
+                                <h4>Pong Arena</h4>
+                                <p>Battle classic AI in neon arenas.</p>
+                            </div>
+                            <a class="pick-action" href="pong-game.html" aria-label="Play Pong Arena">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </article>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+
+                <section class="sidebar-card news-card">
+                    <h3 class="sidebar-title">Patch notes</h3>
+                    <ul class="news-list">
+                        <li>
+                            <span class="news-date">Sep 12</span>
+                            <a href="news.html#fruit-connect-update">Timed mode rebalance with extra hint drops.</a>
+                        </li>
+                        <li>
+                            <span class="news-date">Sep 08</span>
+                            <a href="news.html#controller-support">Controller tweaks improve diagonal paths.</a>
+                        </li>
+                        <li>
+                            <span class="news-date">Sep 03</span>
+                            <a href="news.html#community">Community orchard challenge leaderboard reset.</a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
     </main>
 
-    <!-- Game Modal -->
-    <div class="game-modal" id="game-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modal-title">Game Title</h3>
-                <button class="modal-close" id="modal-close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <iframe id="game-frame" src="https://html5.gamedistribution.com/2abdcdeac7ef400985b05fcc7265d5b7/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="none" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
-        <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Game Center</h4>
-                    <p>Free online game platform</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Browse</h4>
-                    <ul>
-                        <li><a href="iframegame.html">All Games</a></li>
-                        <li><a href="games.html#catalog">Game Catalog</a></li>
-                        <li><a href="news.html">Latest News</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="sitemap.xml">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Questions or feedback? Let us know.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Game Center. All rights reserved.</p>
-            </div>
+            <p>&copy; <span id="year"></span> FruitConnect Game Hub. Play instantly, stay refreshed.</p>
         </div>
     </footer>
 
-    <script src="script.js?v=20250918"></script>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        function toggleMenu() {
+            navMenu.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        }
+
+        navToggle.addEventListener('click', toggleMenu);
+        navToggle.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
