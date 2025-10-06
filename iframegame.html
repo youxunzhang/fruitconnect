@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame 游戏中心 | Game Center</title>
+    <meta name="description" content="在 Game Center 的 IFrame 游戏中心畅玩 100+ 款益智、策略、街机与冒险小游戏。全部在线即开即玩。">
+    <link rel="stylesheet" href="styles.css?v=20250918">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>Game Center</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="iframegame.html" class="nav-link active">Iframe Games</a>
+                <a href="games.html#catalog" class="nav-link">Game Catalog</a>
+                <a href="news.html" class="nav-link">Latest News</a>
+                <a href="https://hotspotgame.online" class="nav-link" target="_blank" rel="noopener">热点游戏</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero games-page-hero">
+            <div class="container">
+                <span class="page-hero-subtitle">100+ IFrame Titles</span>
+                <h1 class="page-hero-title">IFrame 游戏中心</h1>
+                <p class="page-hero-description">精选记忆训练、策略对战、街机冒险等热门小游戏，全部采用 iframe 在线加载，即点即玩无需下载。</p>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container">
+                <h2>按类型探索游戏</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="puzzle">
+                        <div class="category-icon"><i class="fas fa-brain"></i></div>
+                        <h3>益智 Puzzle</h3>
+                        <p>数独、单词、拼图和记忆训练游戏。</p>
+                        <span class="category-count">0 个游戏</span>
+                    </div>
+                    <div class="category-card" data-category="strategy">
+                        <div class="category-icon"><i class="fas fa-chess"></i></div>
+                        <h3>策略 Strategy</h3>
+                        <p>围棋、象棋、军棋与经典棋类合集。</p>
+                        <span class="category-count">0 个游戏</span>
+                    </div>
+                    <div class="category-card" data-category="arcade">
+                        <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>街机 Arcade</h3>
+                        <p>俄罗斯方块、贪吃蛇、赛车与动作街机。</p>
+                        <span class="category-count">0 个游戏</span>
+                    </div>
+                    <div class="category-card" data-category="adventure">
+                        <div class="category-icon"><i class="fas fa-hat-wizard"></i></div>
+                        <h3>冒险 Adventure</h3>
+                        <p>奇幻、解谜、童话与生存探索世界。</p>
+                        <span class="category-count">0 个游戏</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="games-section">
+            <div class="container">
+                <div class="page-header">
+                    <h2>全部 IFrame 游戏列表</h2>
+                    <p>从 Memoji 到 2048，再到超级玛丽和自由车手，使用搜索与分类快速找到心仪的在线小游戏。</p>
+                </div>
+
+                <div class="games-controls">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="game-search" class="search-input" placeholder="搜索游戏或关键词...">
+                    </div>
+                    <div class="filter-container">
+                        <button class="filter-btn active" data-category="all">全部</button>
+                        <button class="filter-btn" data-category="puzzle">益智</button>
+                        <button class="filter-btn" data-category="strategy">策略</button>
+                        <button class="filter-btn" data-category="arcade">街机</button>
+                        <button class="filter-btn" data-category="adventure">冒险</button>
+                    </div>
+                </div>
+
+                <p class="games-stats stats-text">加载中...</p>
+
+                <div class="games-grid" id="games-grid">
+                    <!-- JavaScript 将在此生成游戏卡片 -->
+                </div>
+
+                <button class="load-more-btn" id="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    加载更多游戏
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div class="game-modal" id="game-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Game Title</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="game-frame" src="" width="800" height="600" scrolling="none" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Game Center</h4>
+                    <p>Free online game platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="iframegame.html">All Games</a></li>
+                        <li><a href="games.html#catalog">Game Catalog</a></li>
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Questions or feedback? Let us know.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Game Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=20250918"></script>
+</body>
+</html>
