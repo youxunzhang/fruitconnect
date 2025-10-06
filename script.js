@@ -454,10 +454,13 @@ function renderGames() {
     const gamesToShow = filteredGames.slice(0, displayedGames);
     
     gamesGrid.innerHTML = gamesToShow.map(game => createGameCard(game)).join('');
-    
+
     // 更新游戏统计
     updateGameStats(filteredGames.length);
-    
+
+    // 重新触发懒加载观察
+    observeLazyElements();
+
     // 隐藏加载更多按钮如果没有更多游戏
     if (loadMoreBtn) {
         loadMoreBtn.style.display = displayedGames >= filteredGames.length ? 'none' : 'block';
@@ -591,23 +594,40 @@ function updateCategoryCounts() {
     });
 }
 
+let lazyObserver = null;
+
 // 懒加载功能
 function initializeLazyLoading() {
-    const observer = new IntersectionObserver((entries) => {
+    if (typeof IntersectionObserver === 'undefined') {
+        document.querySelectorAll('.lazy-load').forEach(el => el.classList.add('loaded'));
+        return;
+    }
+
+    lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('loaded');
+                lazyObserver.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.1
     });
 
-    // 观察所有懒加载元素
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.lazy-load').forEach(el => {
-            observer.observe(el);
-        });
+    observeLazyElements();
+}
+
+function observeLazyElements() {
+    if (!lazyObserver) {
+        document.querySelectorAll('.lazy-load').forEach(el => el.classList.add('loaded'));
+        return;
+    }
+
+    document.querySelectorAll('.lazy-load').forEach(el => {
+        if (!el.dataset.lazyObserved) {
+            lazyObserver.observe(el);
+            el.dataset.lazyObserved = 'true';
+        }
     });
 }
 
