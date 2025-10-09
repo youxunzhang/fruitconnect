@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Link – Relaxing Fruit Matching Game</title>
+    <meta name="description" content="Match fruit tiles at your own pace in Fruit Link. Enjoy a calm fruit connect puzzle with unlimited moves and relaxing music.">
+    <link rel="stylesheet" href="/styles.css?v=20250918">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="/">
+                <i class="fas fa-apple-alt" aria-hidden="true"></i>
+                <span>FruitConnect</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/games/" class="nav-link">Games</a>
+                <a href="/games/fruit-link/" class="nav-link active">Fruit Link</a>
+                <a href="/sitemap.xml" class="nav-link">Sitemap</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="page-hero-subtitle">Slow and steady fruit matching</span>
+                <h1 class="page-hero-title">Fruit Link – Relaxing Fruit Matching Game</h1>
+                <p class="page-hero-description">Fruit Link softens the classic fruit connect gameplay with unlimited moves, gentle music, and cozy visuals. Link each matching pair to clear the orchard at your own pace.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container content-grid">
+                <article>
+                    <h2>Why you'll love Fruit Link</h2>
+                    <p>Fruit Link is built for players who want the satisfaction of connecting fruit tiles without the pressure of a countdown clock. Enjoy soothing animations, simple controls, and levels that gradually introduce new fruit arrangements.</p>
+                    <ul class="feature-list">
+                        <li>Unlimited time lets you plan every fruit link carefully.</li>
+                        <li>Helpful hints highlight possible matches when you need inspiration.</li>
+                        <li>Unlock calming background tracks and seasonal fruit packs.</li>
+                        <li>Play in portrait or landscape mode for total comfort.</li>
+                    </ul>
+                </article>
+                <aside>
+                    <h2>How to start playing</h2>
+                    <p>Fruit Link is part of our browser-based Fruit Connect collection. Launch the game through our partner portals for the full experience.</p>
+                    <div class="sidebar-card">
+                        <h3>Play Fruit Link</h3>
+                        <a class="game-play-btn" href="https://www.crazygames.com/game/fruit-link" target="_blank" rel="noopener">Open Fruit Link</a>
+                        <ul class="related-list">
+                            <li><a href="/games/fruit-connect-3/">Play Fruit Connect 3</a></li>
+                            <li><a href="/games/fruit-match-deluxe/">Try Fruit Match Deluxe</a></li>
+                            <li><a href="/games/">View all Fruit Connect games</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Fruit Link FAQ</h2>
+                <div class="faq-grid">
+                    <article class="faq-card">
+                        <h3>Does Fruit Link have ads?</h3>
+                        <p>Fruit Link uses light interstitial ads between rounds. They keep the game free and never interrupt active puzzles.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Can I save my progress?</h3>
+                        <p>Your browser stores your unlocked levels automatically. Return anytime to continue matching fruits.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Is Fruit Link good for kids?</h3>
+                        <p>Yes. The game focuses on pattern recognition and gentle visuals that are great for young players.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>FruitConnect</h4>
+                    <p>Discover the best fruit connect and match puzzle experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore more</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/games/fruit-connect-3/">Fruit Connect 3</a></li>
+                        <li><a href="/games/fruit-match-deluxe/">Fruit Match Deluxe</a></li>
+                        <li><a href="/news.html">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay in touch</h4>
+                    <p>More fruit matching guides and strategies are coming soon.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> fruitconnect.online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        function toggleMenu() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        }
+
+        navToggle.addEventListener('click', toggleMenu);
+        navToggle.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
