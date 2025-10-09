@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Match Deluxe – Fast-Paced Fruit Connect Game</title>
+    <meta name="description" content="Blast through vibrant fruit boards in Fruit Match Deluxe. Trigger power-ups, clear tiles, and chase high scores in this fast-paced fruit connect game.">
+    <link rel="stylesheet" href="/styles.css?v=20250918">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="/">
+                <i class="fas fa-apple-alt" aria-hidden="true"></i>
+                <span>FruitConnect</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/games/" class="nav-link">Games</a>
+                <a href="/games/fruit-match-deluxe/" class="nav-link active">Fruit Match Deluxe</a>
+                <a href="/sitemap.xml" class="nav-link">Sitemap</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="page-hero-subtitle">High score fruit connect action</span>
+                <h1 class="page-hero-title">Fruit Match Deluxe – Fast-Paced Fruit Connect Game</h1>
+                <p class="page-hero-description">Fruit Match Deluxe amps up the Fruit Connect formula with explosive fruit bombs, quick combos, and leaderboard races. Perfect for players who love energy-packed puzzles.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container content-grid">
+                <article>
+                    <h2>Game highlights</h2>
+                    <ul class="feature-list">
+                        <li>Activate fruit bombs and rainbow slices for massive board clears.</li>
+                        <li>Chain back-to-back matches to earn deluxe combo multipliers.</li>
+                        <li>Challenge friends by sharing your top scores directly.</li>
+                        <li>Experience colorful HD fruit art with satisfying sound design.</li>
+                    </ul>
+                    <p>With each round you unlock faster timers, new board layouts, and surprise bonus fruits. Fruit Match Deluxe keeps you on your toes and rewards lightning-fast linking.</p>
+                </article>
+                <aside>
+                    <h2>Ready to play?</h2>
+                    <div class="sidebar-card">
+                        <h3>Launch Fruit Match Deluxe</h3>
+                        <a class="game-play-btn" href="https://www.gogy.com/games/fruit-match-deluxe" target="_blank" rel="noopener">Play on Gogy</a>
+                        <ul class="related-list">
+                            <li><a href="/games/fruit-connect-3/">Fruit Connect 3</a></li>
+                            <li><a href="/games/fruit-link/">Fruit Link</a></li>
+                            <li><a href="/games/">Browse all Fruit Connect games</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Fruit Match Deluxe FAQ</h2>
+                <div class="faq-grid">
+                    <article class="faq-card">
+                        <h3>How do power-ups work?</h3>
+                        <p>Each combo fills your power meter. When full, tap a power-up to clear rows, columns, or entire fruit clusters.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Is there a leaderboard?</h3>
+                        <p>Yes. Sign in with your social account to record scores and compete with other Fruit Connect fans.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Can I play offline?</h3>
+                        <p>Fruit Match Deluxe requires an internet connection to load, but once started you can keep matching even with spotty Wi-Fi.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>FruitConnect</h4>
+                    <p>Keep your puzzle queue fresh with new fruit connect adventures.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/games/">Games</a></li>
+                        <li><a href="/games/fruit-link/">Fruit Link</a></li>
+                        <li><a href="/news.html">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Coming soon</h4>
+                    <p>Check back for strategy guides and Fruit Connect tournaments.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> fruitconnect.online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        function toggleMenu() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        }
+
+        navToggle.addEventListener('click', toggleMenu);
+        navToggle.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

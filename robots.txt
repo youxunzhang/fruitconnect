@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hotspotgame.net/sitemap.xml
+Sitemap: https://fruitconnect.online/sitemap.xml
