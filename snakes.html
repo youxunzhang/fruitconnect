@@ -3,277 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snakes Arcade – Play Classic Snake Games Online</title>
-    <meta name="description" content="Play the best free snake games in your browser. Discover arcade, multiplayer, and puzzle snake titles with instant play embeds and quick tips.">
-    <link rel="stylesheet" href="/styles.css?v=20250918">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Play the best snake games online with colorful puzzles, arcade classics, and modern twists.">
+    <title>Snakes - Play Colorful Snake Games | Game Studio</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1f2242;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.35rem 0.85rem 0.35rem 0.6rem;
+            border-radius: 1.25rem;
+            font-size: 1.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.18rem;
+            text-decoration: none;
+            background: linear-gradient(120deg, #5f3df7, #05d0f5, #38f5a5);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: logoPulse 8s ease infinite;
+            filter: drop-shadow(0 10px 22px rgba(95, 61, 247, 0.25));
+            transition: transform 0.35s ease, filter 0.35s ease;
+            isolation: isolate;
+            z-index: 0;
+        }
+
+        .logo::before {
+            content: 'GS';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 0.85rem;
+            background: linear-gradient(135deg, rgba(95, 61, 247, 0.95), rgba(5, 208, 245, 0.95));
+            box-shadow: 0 15px 30px rgba(95, 61, 247, 0.4);
+            color: #ffffff;
+            font-size: 1.05rem;
+            letter-spacing: 0.1rem;
+            text-shadow: 0 0 14px rgba(0, 0, 0, 0.35);
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            inset: 0.2rem -0.4rem;
+            border-radius: 1.4rem;
+            background: radial-gradient(circle at 0% 0%, rgba(95, 61, 247, 0.28), transparent 60%),
+                        radial-gradient(circle at 100% 100%, rgba(56, 245, 165, 0.3), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 14px 30px rgba(95, 61, 247, 0.35));
+        }
+
+        .logo:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes logoPulse {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus-within {
+            border-color: #667eea;
+        }
+
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0.5rem;
+            width: 200px;
+        }
+
+        .content {
+            max-width: 1300px;
+            margin: 110px auto 60px;
+            padding: 0 2rem 3rem;
+        }
+
+        .page-header {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .page-header p {
+            color: #e9e9ff;
+            font-size: 1.05rem;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .snake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .snake-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 18px 35px rgba(20, 20, 43, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .snake-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 24px 45px rgba(20, 20, 43, 0.12);
+        }
+
+        .card-thumb {
+            position: relative;
+            padding-top: 65%;
+            overflow: hidden;
+        }
+
+        .card-thumb img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1rem 1.1rem 1.2rem;
+            display: grid;
+            gap: 0.4rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.05rem;
+            color: #1f2242;
+        }
+
+        .card-body p {
+            color: #5b5b7a;
+            font-size: 0.95rem;
+        }
+
+        .card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.2rem;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(102, 126, 234, 0.12);
+            color: #4a4fd4;
+            text-decoration: none;
+            font-weight: 600;
+            width: fit-content;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .card-action:hover {
+            background: linear-gradient(120deg, #667eea, #764ba2);
+            color: #ffffff;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: #fff;
+            margin: 2rem 0 0.8rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .search-box {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
+    <nav class="navbar">
         <div class="nav-container">
-            <a class="nav-brand" href="/">
-                <i class="fas fa-apple-alt" aria-hidden="true"></i>
-                <span>FruitConnect</span>
-            </a>
-            <nav class="nav-menu" id="nav-menu" aria-label="Primary">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/games/" class="nav-link">Games</a>
-                <a href="/snakes.html" class="nav-link active">Snakes</a>
-                <a href="/news.html" class="nav-link">News</a>
-                <a href="/sitemap.xml" class="nav-link">Sitemap</a>
-            </nav>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" type="button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <a href="index.html" class="logo">game studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="featured-games.html">Featured</a></li>
+                <li><a href="brain-teasers.html">Brain Teasers</a></li>
+                <li><a href="snakes.html">Snakes</a></li>
+                <li><a href="marketing-hub.html">Marketing</a></li>
+                <li><a href="about-us.html">About</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Search games..." aria-label="Search games">
+                <span>🔍</span>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="page-hero snakes-hero">
-            <div class="container">
-                <span class="page-hero-subtitle">Arcade classics · Cozy puzzles</span>
-                <h1 class="page-hero-title">Snakes Arcade</h1>
-                <p class="page-hero-description">Slide into a colorful collection of modern snake games. Chase glowing pellets, weave through mazes, and climb leaderboards across multiplayer arenas and relaxing solo runs.</p>
-                <div class="hero-actions">
-                    <a class="btn-hero" href="#snake-catalog">
-                        <i class="fas fa-gamepad"></i>
-                        Browse Snake Games
-                    </a>
-                    <a class="btn-secondary" href="/games/">
-                        View Puzzle Catalog
-                    </a>
-                </div>
-            </div>
-        </section>
+    <main class="content">
+        <header class="page-header">
+            <h1>Snakes Collection</h1>
+            <p>Slide into colorful puzzle adventures, arcade races, and relaxing snake quests inspired by the playful gallery above.</p>
+        </header>
 
-        <section class="content-section" id="snake-catalog">
-            <div class="container">
-                <div class="page-header">
-                    <h2>Pick a snake adventure</h2>
-                    <p>From neon arenas to adorable critters, these bite-sized games deliver quick rounds, daily challenges, and endless high-score chases.</p>
-                </div>
-
-                <div class="games-grid snakes-grid">
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Classic snake io neon board">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Arcade · Multiplayer</div>
-                            <h3>Snake io</h3>
-                            <p class="game-description">Dash around the arena, gobble pellets, and outgrow rivals in a glowing online snake showdown.</p>
-                            <a class="game-play-btn" href="https://poki.com/en/g/snake-io" target="_blank" rel="noopener">Play Snake io</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=80" alt="Minimal snake tiles on a grid">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Retro · Endless</div>
-                            <h3>Snake Classic</h3>
-                            <p class="game-description">Navigate a sleek grid, collect fruit, and keep your tail from tangling in this minimalist revival.</p>
-                            <a class="game-play-btn" href="https://playsnake.org/" target="_blank" rel="noopener">Play Snake Classic</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Cube style snake arena">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">3D · Competitive</div>
-                            <h3>Snake Attack</h3>
-                            <p class="game-description">Grow in three dimensions while dodging rival trails and snagging super-charged boosts.</p>
-                            <a class="game-play-btn" href="https://www.crazygames.com/game/snake-attack" target="_blank" rel="noopener">Play Snake Attack</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Colorful candy snake maze">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Puzzle · Cozy</div>
-                            <h3>Yummy Trails</h3>
-                            <p class="game-description">Follow sweet-smelling paths, grab treats, and unwind with friendly level-based snake puzzles.</p>
-                            <a class="game-play-btn" href="https://poki.com/en/g/yummy-snakes" target="_blank" rel="noopener">Play Yummy Trails</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1545239351-46c48e6f0d4f?auto=format&fit=crop&w=900&q=80" alt="Bright rescue snakes characters">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Adventure · Rescue</div>
-                            <h3>Cat Rescue Snake</h3>
-                            <p class="game-description">Curl around obstacles, protect tiny kittens, and escort them to safety without breaking your line.</p>
-                            <a class="game-play-btn" href="https://www.silvergames.com/en/cat-rescue" target="_blank" rel="noopener">Play Cat Rescue Snake</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=900&q=80" alt="Pixel snake dungeon">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Dungeon · Strategy</div>
-                            <h3>Monster Arena</h3>
-                            <p class="game-description">Sweep through spooky arenas, defeat bosses, and evolve new tail segments as you level up.</p>
-                            <a class="game-play-btn" href="https://www.crazygames.com/game/monster-arena" target="_blank" rel="noopener">Play Monster Arena</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1526932749720-26e379deedb7?auto=format&fit=crop&w=900&q=80" alt="Cozy farm snake board">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Casual · Relax</div>
-                            <h3>Fire Snake</h3>
-                            <p class="game-description">Warm up in a gentle farmyard course, weave past hay bales, and collect glowing sparks.</p>
-                            <a class="game-play-btn" href="https://poki.com/en/g/fire-snake" target="_blank" rel="noopener">Play Fire Snake</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Bright neon snake sprint">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Speedrun · Neon</div>
-                            <h3>Snake Sprint</h3>
-                            <p class="game-description">Race through glowing gates, dash for multiplier orbs, and slither to the top of the daily charts.</p>
-                            <a class="game-play-btn" href="https://www.silvergames.com/en/snake-sprint" target="_blank" rel="noopener">Play Snake Sprint</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1451188502541-13943edb6acb?auto=format&fit=crop&w=900&q=80" alt="Glow snake labyrinth">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Maze · Logic</div>
-                            <h3>Tangled Snakes</h3>
-                            <p class="game-description">Untie winding tails inside compact mazes. Each level adds new walls, portals, and tricky turns.</p>
-                            <a class="game-play-btn" href="https://poki.com/en/g/tangled-snakes" target="_blank" rel="noopener">Play Tangled Snakes</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="City snake chasing puzzle">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Puzzle · Rescue</div>
-                            <h3>Snake Hunter</h3>
-                            <p class="game-description">Escort your squad through winding streets, collect keys, and complete objectives before time runs out.</p>
-                            <a class="game-play-btn" href="https://www.crazygames.com/game/snake-hunter" target="_blank" rel="noopener">Play Snake Hunter</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=900&q=80" alt="Colorful slime snake characters">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Co-op · Party</div>
-                            <h3>Squid Sprint Slither</h3>
-                            <p class="game-description">Team up with friends, curve around obstacles, and snag power cores in breezy party rounds.</p>
-                            <a class="game-play-btn" href="https://poki.com/en/g/squid-sprinter" target="_blank" rel="noopener">Play Squid Sprint Slither</a>
-                        </div>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-image">
-                            <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=900&q=80" alt="isometric snake puzzle">
-                        </div>
-                        <div class="game-info">
-                            <div class="game-category">Logic · Minimal</div>
-                            <h3>Snake 2048</h3>
-                            <p class="game-description">Merge matching numbers as you slither, grow smarter with each swipe, and chase the elusive 2048 tile.</p>
-                            <a class="game-play-btn" href="https://poki.com/en/g/snake-2048" target="_blank" rel="noopener">Play Snake 2048</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section alt-bg">
-            <div class="container content-grid">
-                <article>
-                    <h2>Snake game tips for quick wins</h2>
-                    <ul class="feature-list">
-                        <li>Use short taps or arrow keys to create gentle turns instead of sharp corners.</li>
-                        <li>Circle power-ups before grabbing them so rivals crash while you grow.</li>
-                        <li>Zoom out your awareness—keep an eye on both your head and tail position.</li>
-                        <li>In puzzle modes, map your exit path before collecting the final pellet.</li>
-                    </ul>
-                    <p>Whether you are chasing leaderboards or relaxing with cozy mazes, the best runs start with smooth control. Take it slow, plan your lines, and enjoy the satisfying flow of a perfectly placed turn.</p>
-                </article>
-                <aside class="sidebar-card">
-                    <h3>Quick controls</h3>
-                    <p class="game-description">Tap or click to change direction, or use arrow/WASD keys in desktop modes.</p>
-                    <div class="info-list">
-                        <p><strong>Boost:</strong> Hold space or double-tap to sprint.</p>
-                        <p><strong>Camera:</strong> Pinch to zoom on mobile, scroll on desktop.</p>
-                        <p><strong>Safety:</strong> Don’t cross your tail unless the game mode allows portals.</p>
+        <section aria-label="Snake games grid">
+            <div class="snake-grid">
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Cartoon snake puzzle icon">
                     </div>
-                </aside>
+                    <div class="card-body">
+                        <h3>Snakes Puzzle</h3>
+                        <p>Wind through colorful tiles and solve vibrant brain teasers.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Retro snake game logo">
+                    </div>
+                    <div class="card-body">
+                        <h3>Classic Snake</h3>
+                        <p>Retro arcade loops with slick controls and neon skins.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Green snake character smiling">
+                    </div>
+                    <div class="card-body">
+                        <h3>Monster Arena</h3>
+                        <p>Grow your serpent and outmaneuver rivals in the arena.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188996.png" alt="Fire themed snake icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Fire Snake</h3>
+                        <p>Dash past hazards with blazing boosts and sharp turns.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616569.png" alt="Cute snake in rescue adventure">
+                    </div>
+                    <div class="card-body">
+                        <h3>Cat Rescue</h3>
+                        <p>Guide a friendly snake through cozy puzzles to save kittens.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616504.png" alt="Candy snake trail icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Yummy Trails</h3>
+                        <p>Collect sweets and avoid traps across tasty pastel boards.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188985.png" alt="Dragon guarding gems icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Dragon Out</h3>
+                        <p>Weave past dragons, grab gems, and escape the dungeon.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616417.png" alt="Zig zagging snake icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Zig Snake</h3>
+                        <p>Sharp turns, neon colors, and upbeat endless runner vibes.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188988.png" alt="Hunter snake icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snake Hunter</h3>
+                        <p>Track glowing orbs, grow fast, and hunt for leaderboard glory.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188993.png" alt="Tangled snakes illustration">
+                    </div>
+                    <div class="card-body">
+                        <h3>Tangled Snakes</h3>
+                        <p>Untie colorful serpents without blocking your own path.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616561.png" alt="Pixel snake icon for arena">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snake.io Arena</h3>
+                        <p>Slide into quick multiplayer matches and become the biggest.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616535.png" alt="Snake puzzle blocks icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snake Puzzle</h3>
+                        <p>Shift numbered blocks, merge tails, and clear the board.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616444.png" alt="Cute 3D snake model">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snake 3D</h3>
+                        <p>Navigate a glossy 3D world packed with colorful surprises.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188981.png" alt="Panda resting on snake coil icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Sleepy Snake</h3>
+                        <p>Cozy visuals and calm pacing make this maze a zen escape.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616436.png" alt="Octopus with snake friend icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snake & Octopus</h3>
+                        <p>Swap between water and land routes to clear clever puzzles.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616449.png" alt="Puzzle beast icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Beast Puzzle</h3>
+                        <p>Rotate winding beasts so every segment locks perfectly.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188979.png" alt="Legendary snake icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Legend Snake</h3>
+                        <p>Quest through portals, unlock skins, and master sharp turns.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616503.png" alt="Pink snake icon for pop adventure">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snake Pop</h3>
+                        <p>Bubble-popping meets slithering routes in a vibrant mix.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/188/188989.png" alt="Labyrinth maze icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Maze Snake</h3>
+                        <p>Find the quickest exit while gathering stars along the way.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
+                <article class="snake-card">
+                    <div class="card-thumb">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" alt="Purple dragon snake icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>Dragon Snake</h3>
+                        <p>Collect crystals, breathe fire, and soar through sky loops.</p>
+                        <a class="card-action" href="#">Play now →</a>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>FruitConnect</h4>
-                    <p>Play free puzzle and arcade titles anywhere.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/games/">Fruit Games</a></li>
-                        <li><a href="/snakes.html">Snakes</a></li>
-                        <li><a href="/news.html">News</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Stay Sharp</h4>
-                    <p>Check back for fresh levels, multiplayer events, and puzzle tips.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> fruitconnect.online. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
-
-        function toggleMenu() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        }
-
-        navToggle.addEventListener('click', toggleMenu);
-        navToggle.addEventListener('keypress', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                toggleMenu();
-            }
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
